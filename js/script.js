@@ -1,138 +1,256 @@
-(function($){
-  // Search
-  var $searchWrap = $('#search-form-wrap'),
-    isSearchAnim = false,
-    searchAnimDuration = 200;
+/**
+ * polyfill for Element.matches
+ */
+if (!Element.prototype.matches) {
+  Element.prototype.matches = Element.prototype.msMatchesSelector ||
+    Element.prototype.webkitMatchesSelector;
+}
 
-  var startSearchAnim = function(){
-    isSearchAnim = true;
+/**
+ * @function debounce
+ * @param {Function} fn The function to run after a certain amount of time
+ * @param {Number} wait The delay time in milliseconds
+ * @return {Function}
+ */
+const debounce = (fn, wait) => {
+  let timer;
+  return function() {
+    const fnCall = () => fn.apply(this, arguments);
+    clearTimeout(timer);
+    timer = setTimeout(fnCall, wait)
+  }
+};
+
+/**
+ * implementation for Accessible Layerpopup
+ * @module SlidingMenu
+ * @param {Element} doc document element
+ */
+const SlidingMenu = (() => {
+  'use strict';
+
+  const rootEl = document.documentElement;
+  /**
+   * @private {String} tabbableSelector The selector for selecting a tabbable elements
+   */
+  const tabbableSelector = `button, [href], input:not([type="hidden"]), select, textarea, [tabindex]:not([tabindex="-1"])`;
+  /**
+   * @private {Object} props
+   * @property {HTMLElement} props.trigger=null The element that triggers sliding panel
+   * @property {HTMLElement} props.panel=null The element that is sliding panel
+   * @property {NodeList} props.tabbableEls=null The tabbable elements inside sliding panel
+   * @property {HTMLElement} props.firstTabbable=null The first tabbable elements inside sliding panel
+   * @property {HTMLElement} props.lastTabbable=null The last tabbable elements inside sliding panel
+   * @property {String} props.inertOmmits=null The selector for elements that should not be inert when sliding panel is opened
+   */
+  const props = {
+    trigger: null,
+    panel: null,
+    tabbableEls: null,
+    firstTabbable: null,
+    lastTabbable: null,
+    inertOmmits: null,
   };
 
-  var stopSearchAnim = function(callback){
-    setTimeout(function(){
-      isSearchAnim = false;
-      callback && callback();
-    }, searchAnimDuration);
-  };
+  /**
+   * @public
+   * @function init
+   * @param {Object} options
+   * @param {Element} options.trigger
+   * @param {Element} options.panel
+   * @param {String} options.inertOmmits
+   */
+  const init = function(options) {
+    const {
+      trigger,
+      panel,
+      inertOmmits,
+    } = options;
 
-  $('#nav-search-btn').on('click', function(){
-    if (isSearchAnim) return;
-
-    startSearchAnim();
-    $searchWrap.addClass('on');
-    stopSearchAnim(function(){
-      $('.search-form-input').focus();
-    });
-  });
-
-  $('.search-form-input').on('blur', function(){
-    startSearchAnim();
-    $searchWrap.removeClass('on');
-    stopSearchAnim();
-  });
-
-  // Share
-  $('body').on('click', function(){
-    $('.article-share-box.on').removeClass('on');
-  }).on('click', '.article-share-link', function(e){
-    e.stopPropagation();
-
-    var $this = $(this),
-      url = $this.attr('data-url'),
-      encodedUrl = encodeURIComponent(url),
-      id = 'article-share-box-' + $this.attr('data-id'),
-      title = $this.attr('data-title'),
-      offset = $this.offset();
-
-    if ($('#' + id).length){
-      var box = $('#' + id);
-
-      if (box.hasClass('on')){
-        box.removeClass('on');
-        return;
-      }
-    } else {
-      var html = [
-        '<div id="' + id + '" class="article-share-box">',
-          '<input class="article-share-input" value="' + url + '">',
-          '<div class="article-share-links">',
-            '<a href="https://twitter.com/intent/tweet?text=' + encodeURIComponent(title) + '&url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
-            '<a href="https://www.linkedin.com/shareArticle?mini=true&url=' + encodedUrl + '" class="article-share-linkedin" target="_blank" title="LinkedIn"></a>',
-          '</div>',
-        '</div>'
-      ].join('');
-
-      var box = $(html);
-
-      $('body').append(box);
+    if(!trigger || !panel) {
+      throw new Error("SlidingMenu can't initialized.\ncheck your options");
     }
 
-    $('.article-share-box.on').hide();
+    // initializing props's properties
+    props.trigger = trigger;
+    props.panel = panel;
+    props.tabbableEls = panel.querySelectorAll(tabbableSelector);
+    props.firstTabbable = props.tabbableEls && props.tabbableEls[0];
+    props.lastTabbable = props.tabbableEls && props.tabbableEls[props.tabbableEls.length - 1];
+    props.inertOmmits = inertOmmits;
 
-    box.css({
-      top: offset.top + 25,
-      left: offset.left
-    }).addClass('on');
-  }).on('click', '.article-share-box', function(e){
-    e.stopPropagation();
-  }).on('click', '.article-share-box-input', function(){
-    $(this).select();
-  }).on('click', '.article-share-box-link', function(e){
-    e.preventDefault();
-    e.stopPropagation();
-
-    window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-  });
-
-  // Caption
-  $('.article-entry').each(function(i){
-    $(this).find('img').each(function(){
-      if ($(this).parent().hasClass('fancybox') || $(this).parent().is('a')) return;
-
-      var alt = this.alt;
-
-      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
-
-      $(this).wrap('<a href="' + this.src + '" data-fancybox=\"gallery\" data-caption="' + alt + '"></a>')
-    });
-
-    $(this).find('.fancybox').each(function(){
-      $(this).attr('rel', 'article' + i);
-    });
-  });
-
-  if ($.fancybox){
-    $('.fancybox').fancybox();
-  }
-
-  // Mobile nav
-  var $container = $('#container'),
-    isMobileNavAnim = false,
-    mobileNavAnimDuration = 200;
-
-  var startMobileNavAnim = function(){
-    isMobileNavAnim = true;
+    // bind events for activating open/close slide menu
+    panel.addEventListener('transitionend', handlerTransitionEvt, false);
+    trigger.addEventListener('click', toggleNavigation, false);
   };
 
-  var stopMobileNavAnim = function(){
-    setTimeout(function(){
-      isMobileNavAnim = false;
-    }, mobileNavAnimDuration);
+  /**
+   * return current visibility
+   * @public
+   * @function isVisible
+   * @return {Boolean}
+   */
+  const isVisible = () => {
+    const { panel } = props;
+    return panel.classList.contains('nav--animate');
+  };
+
+  /**
+   * @private
+   * @function toggleNavigation
+   */
+  const toggleNavigation = () => {
+    if(isVisible()) closePanel();
+    else openPanel();
+  };
+
+  /**
+   * @private
+   * @function openPanel
+   */
+  const openPanel = () => {
+    const {
+      panel,
+      trigger,
+    } = props;
+    rootEl.classList.add('sidebar-opened');
+    document.addEventListener('keydown', handlerKeyEvt, false);
+
+    debounce(() => {
+      panel.classList.add('nav--animate');
+      panel.setAttribute('aria-hidden', 'false');
+
+      trigger.lastChild.textContent = `close`;
+      trigger.setAttribute('aria-expanded', 'true');
+      setInertness(panel);
+    }, 50)();
+  };
+
+  /**
+   * @private
+   * @function closePanel
+   */
+  const closePanel = () => {
+    const { panel } = props;
+
+    unsetInertness();
+    panel.classList.remove('nav--animate');
+    document.removeEventListener('keydown', handlerKeyEvt, false);
+  };
+
+  /**
+   * set inert elements of the bottom page except menu element when the menu is opened
+   * @private
+   * @function setInertness
+   */
+  const setInertness = () => {
+    const {
+      inertOmmits,
+      panel,
+    } = props;
+
+    for(let i = -1, node; node = panel.parentNode.children[++i];) {
+      if(node === panel || node.matches(inertOmmits))
+        continue;
+      node.setAttribute('aria-hidden', 'true');
+      node.setAttribute('inert', '');
+    }
   }
 
-  $('#main-nav-toggle').on('click', function(){
-    if (isMobileNavAnim) return;
+  /**
+   * unset inert elements when the menu is closed
+   * @private
+   * @function unsetInertness
+   */
+  const unsetInertness = () => {
+    const nodes = document.querySelectorAll('[inert]');
+    for(let i = -1, node; node = nodes[++i];){
+      node.removeAttribute('aria-hidden');
+      node.removeAttribute('inert');
+    }
+  }
 
-    startMobileNavAnim();
-    $container.toggleClass('mobile-nav-on');
-    stopMobileNavAnim();
-  });
+  /**
+   * handle after the css animation ends
+   * @private
+   * @function handlerTransitionEvt
+   */
+  const handlerTransitionEvt = () => {
+    const {
+      firstTabbable,
+      trigger,
+      panel,
+    } = props;
+    debounce(() => {
+      if(isVisible()) {
+        firstTabbable.focus();
+      }else{
+        trigger.lastChild.textContent = `menu`;
+        trigger.setAttribute('aria-expanded', 'false');
+        rootEl.classList.remove('sidebar-opened');
+        panel.setAttribute('aria-hidden', 'true');
+        trigger.focus();
+      }
+    }, 20)();
+  };
 
-  $('#wrap').on('click', function(){
-    if (isMobileNavAnim || !$container.hasClass('mobile-nav-on')) return;
+  /**
+   * make a trap for the focus movement via tab key, and closing feature via ESC key
+   * @private
+   * @function handlerKeyEvt
+   * @param {Event}
+   */
+  const handlerKeyEvt = event => {
+    event = event || window.event;
+    const {
+      keyCode,
+      which,
+      target,
+      srcElement,
+      shiftKey,
+    } = event;
+    const {
+      lastTabbable,
+      firstTabbable,
+      trigger,
+    } = props;
+    const keycode = keyCode || which;
+    const el = target || srcElement;
 
-    $container.removeClass('mobile-nav-on');
-  });
-})(jQuery);
+    switch (keycode) {
+      case 27:
+        if(isVisible()) closePanel();
+        break;
+      case 9:
+        if(isVisible() && el === trigger && shiftKey) {
+          event.preventDefault();
+          event.stopPropagation();
+          lastTabbable.focus();
+        }else if (isVisible() && el === trigger && !shiftKey) {
+          event.preventDefault();
+          event.stopPropagation();
+          firstTabbable.focus();
+        }else if(el === firstTabbable && shiftKey) {
+          event.preventDefault();
+          event.stopPropagation();
+          trigger.focus();
+        }else if(el === lastTabbable && !shiftKey) {
+          event.preventDefault();
+          event.stopPropagation();
+          trigger.focus();
+        }
+        break;
+    }
+  };
+
+  return {
+    init,
+    isVisible,
+  }
+})();
+
+SlidingMenu.init({
+  trigger: document.getElementsByClassName('nav-toggle')[0],
+  panel: document.getElementsByClassName('nav')[0],
+  inertOmmits: `.gnb, style, meta, link, base, script, .nav`,
+})
