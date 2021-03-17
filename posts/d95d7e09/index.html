@@ -1,1 +1,1650 @@
-<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"><meta http-equiv=X-UA-Compatible content="ie=edge"><link rel="shortcut icon" href=/static/favicon.ico><title>Phoenix</title><link href=/static/css/app.c64eadfc8d3abfc9d85514dba4054813.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/static/js/manifest.992b63bf2abbf3194771.js></script><script type=text/javascript src=/static/js/vendor.e12dc8c9af1f7aa12436.js></script><script type=text/javascript src=/static/js/app.bc036f9167871d39aecf.js></script></body></html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  
+  <meta name="keywords" content="网站关键字">
+  <meta name="description" content="网站简介">
+  
+  <title>Phoenix</title>
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/materialize.min.css">
+    
+      <link rel="stylesheet" href="/css/main.min.css">
+    
+  
+  <style type="text/css">
+      html{
+          font-family: sans-serif;
+          font-weight: 300;
+      }
+      @font-face {
+          font-family: 'Material Icons';
+          font-style: normal;
+          font-weight: 400;
+          src: url(/fonts/MaterialIcons-Regular.eot);
+          src: url(/fonts/MaterialIcons-Regular.woff2) format('woff2'),
+          url(/fonts/MaterialIcons-Regular.woff) format('woff'),
+          url(/fonts/MaterialIcons-Regular.ttf) format('truetype')
+      }
+  </style>
+<link rel="shortcut icon" href="/source/favicon.ico">
+</head>
+<body>
+<div id="menu-box"><a href="javascript:void(0)" id="menu" data-activates="slide-out" class="button-collapse menu" ><span class="nav-btn"></span></a></div>
+<div id="menu-outer">
+  <div id="menu-inner">
+      <ul id="slide-out" class="side-nav" >
+    <div class="nav-header"  style="background-image: url(/images/header-bg.png);background-color:#26A69A">
+    <div class="header-box"><img src="/images/header.png" ondragstart="return false;"></div>
+    <p>Jerry</p>
+    <div class="nav-link">
+        
+        <a href="http://example.com" target="_blank"> <div class="link-box twitter"></div></a>
+        
+        
+        <a  href="http://example.com" target="_blank"><div class="link-box github"></div></a>
+        
+        
+        <a href="mailto:http://example.com"><div class="link-box email"></div></a>
+        
+        
+        <a href="http://example.com" target="_blank"><div class="link-box weibo"></div></a>
+        
+        
+        <a href="http://example.com" target="_blank"> <div class="link-box zhihu"></div></a>
+        
+    </div>
+    <div class="nav-search">
+        <form id="search-form"> <!-- 搜索框相关 -->
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索..." class="search form-control" autocomplete="off" autocorrect="off"/>
+            <div class="nav-search-img"><i class="material-icons">search</i></div>
+        </form>
+        <div id="local-search-result"></div> <!-- 搜索结果区 -->
+        <p class='no-result'>无搜索结果</p>
+    </div>
+</div>
+    <!--Homepage-->
+
+<li class="nav-list">
+    <a href="/" target="_self">
+        <div class="nav-ico"><i class="material-icons">home</i> </div><p>主页</p>
+    </a>
+</li>
+
+<!--archives-->
+
+<li class="nav-list dropdown-btn">
+    <a  class=""  target="_self">
+        <div class="nav-ico"><i class="material-icons">assignment</i></div><p>归档</p><div class="dropdown-ico"><i class="material-icons">arrow_drop_down</i></div>
+    </a>
+</li>
+
+<ul class="dropdown-menu dropdown" >
+    <li class="nav-dropdown-list">
+        <a class="archive-link" href="/archives/2021/03/">三月 2021<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2020/12/">十二月 2020<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2020/10/">十月 2020<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2020/09/">九月 2020<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2020/06/">六月 2020<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2020/05/">五月 2020<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2020/04/">四月 2020<span class="archive-count">2</span></a>
+    </li>
+</ul>
+<!--categories-->
+
+<ul class="dropdown-menu dropdown" >
+    <li class="nav-dropdown-list">
+        
+    </li>
+</ul>
+<!--tags-->
+
+<li class="nav-list">
+    <a href="/archives" target="_self">
+        <div class="nav-ico"><i class="material-icons">bookmark</i> </div><p>标签</p>
+    </a>
+</li>
+
+<!--photo-->
+
+<!--friends-->
+
+<!--about-->
+
+
+</ul>
+
+  </div>
+</div>
+
+<div id="content-outer">
+  <div id="content-inner">
+    
+<article id="post">
+  <div class="post-page-title"  style="background-color:#26A69A;background-image:url(/images/random/vateral-6.png)" >
+  <h2>我的第一篇博客</h2>
+    
+  <p>作者:Jerry &nbsp&nbsp 发布于:<time datetime="2020-12-22T12:00:07.000Z">
+          2020-12-22
+    </time>
+  </p>
+    
+  </div>
+  <div class="post-page-content">
+  <h3 id="1-音频组件控制"><a href="#1-音频组件控制" class="headerlink" title="1.音频组件控制"></a>1.音频组件控制</h3><h4 id="uni-createInnerAudioContext"><a href="#uni-createInnerAudioContext" class="headerlink" title="uni.createInnerAudioContext()"></a><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/audio-context?id=createinneraudiocontext">uni.createInnerAudioContext()</a></h4><p>创建并返回内部 audio 上下文 <code>innerAudioContext</code> 对象。</p>
+<p><strong>平台差异说明</strong></p>
+<table>
+<thead>
+<tr>
+<th>App</th>
+<th>H5</th>
+<th>微信小程序</th>
+<th>支付宝小程序</th>
+<th>百度小程序</th>
+<th>字节跳动小程序</th>
+<th>QQ小程序</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>1.23.4+</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+</tbody></table>
+<p><strong>innerAudioContext 对象的属性列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>说明</th>
+<th>只读</th>
+<th>平台差异说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>src</td>
+<td>String</td>
+<td>音频的数据链接，用于直接播放。</td>
+<td>否</td>
+<td></td>
+</tr>
+<tr>
+<td>startTime</td>
+<td>Number</td>
+<td>开始播放的位置（单位：s），默认 0</td>
+<td>否</td>
+<td></td>
+</tr>
+<tr>
+<td>autoplay</td>
+<td>Boolean</td>
+<td>是否自动开始播放，默认 false</td>
+<td>否</td>
+<td>H5端部分浏览器不支持</td>
+</tr>
+<tr>
+<td>loop</td>
+<td>Boolean</td>
+<td>是否循环播放，默认 false</td>
+<td>否</td>
+<td></td>
+</tr>
+<tr>
+<td>obeyMuteSwitch</td>
+<td>Boolean</td>
+<td>是否遵循系统静音开关，当此参数为 false 时，即使用户打开了静音开关，也能继续发出声音，默认值 true</td>
+<td>否</td>
+<td>微信小程序、百度小程序、字节跳动小程序</td>
+</tr>
+<tr>
+<td>duration</td>
+<td>Number</td>
+<td>当前音频的长度（单位：s），只有在当前有合法的 src 时返回，需要在onCanplay中获取</td>
+<td>是</td>
+<td></td>
+</tr>
+<tr>
+<td>currentTime</td>
+<td>Number</td>
+<td>当前音频的播放位置（单位：s），只有在当前有合法的 src 时返回，时间不取整，保留小数点后 6 位</td>
+<td>是</td>
+<td></td>
+</tr>
+<tr>
+<td>paused</td>
+<td>Boolean</td>
+<td>当前是是否暂停或停止状态，true 表示暂停或停止，false 表示正在播放</td>
+<td>是</td>
+<td></td>
+</tr>
+<tr>
+<td>buffered</td>
+<td>Number</td>
+<td>音频缓冲的时间点，仅保证当前播放时间点到此时间点内容已缓冲。</td>
+<td>是</td>
+<td></td>
+</tr>
+<tr>
+<td>volume</td>
+<td>Number</td>
+<td>音量。范围 0~1。</td>
+<td>否</td>
+<td></td>
+</tr>
+</tbody></table>
+<p><strong>innerAudioContext 对象的方法列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>play</td>
+<td></td>
+<td>播放（H5端部分浏览器需在用户交互时进行）</td>
+</tr>
+<tr>
+<td>pause</td>
+<td></td>
+<td>暂停</td>
+</tr>
+<tr>
+<td>stop</td>
+<td></td>
+<td>停止</td>
+</tr>
+<tr>
+<td>seek</td>
+<td>position</td>
+<td>跳转到指定位置，单位 s</td>
+</tr>
+<tr>
+<td>destroy</td>
+<td></td>
+<td>销毁当前实例</td>
+</tr>
+<tr>
+<td>onCanplay</td>
+<td>callback</td>
+<td>音频进入可以播放状态，但不保证后面可以流畅播放</td>
+</tr>
+<tr>
+<td>onPlay</td>
+<td>callback</td>
+<td>音频播放事件</td>
+</tr>
+<tr>
+<td>onPause</td>
+<td>callback</td>
+<td>音频暂停事件</td>
+</tr>
+<tr>
+<td>onStop</td>
+<td>callback</td>
+<td>音频停止事件</td>
+</tr>
+<tr>
+<td>onEnded</td>
+<td>callback</td>
+<td>音频自然播放结束事件</td>
+</tr>
+<tr>
+<td>onTimeUpdate</td>
+<td>callback</td>
+<td>音频播放进度更新事件</td>
+</tr>
+<tr>
+<td>onError</td>
+<td>callback</td>
+<td>音频播放错误事件</td>
+</tr>
+<tr>
+<td>onWaiting</td>
+<td>callback</td>
+<td>音频加载中事件，当音频因为数据不足，需要停下来加载时会触发</td>
+</tr>
+<tr>
+<td>onSeeking</td>
+<td>callback</td>
+<td>音频进行 seek 操作事件</td>
+</tr>
+<tr>
+<td>onSeeked</td>
+<td>callback</td>
+<td>音频完成 seek 操作事件</td>
+</tr>
+<tr>
+<td>offCanplay</td>
+<td>callback</td>
+<td>取消监听 onCanplay 事件</td>
+</tr>
+<tr>
+<td>offPlay</td>
+<td>callback</td>
+<td>取消监听 onPlay 事件</td>
+</tr>
+<tr>
+<td>offPause</td>
+<td>callback</td>
+<td>取消监听 onPause 事件</td>
+</tr>
+<tr>
+<td>offStop</td>
+<td>callback</td>
+<td>取消监听 onStop 事件</td>
+</tr>
+<tr>
+<td>offEnded</td>
+<td>callback</td>
+<td>取消监听 onEnded 事件</td>
+</tr>
+<tr>
+<td>offTimeUpdate</td>
+<td>callback</td>
+<td>取消监听 onTimeUpdate 事件</td>
+</tr>
+<tr>
+<td>offError</td>
+<td>callback</td>
+<td>取消监听 onError 事件</td>
+</tr>
+<tr>
+<td>offWaiting</td>
+<td>callback</td>
+<td>取消监听 onWaiting 事件</td>
+</tr>
+<tr>
+<td>offSeeking</td>
+<td>callback</td>
+<td>取消监听 onSeeking 事件</td>
+</tr>
+<tr>
+<td>offSeeked</td>
+<td>callback</td>
+<td>取消监听 onSeeked 事件</td>
+</tr>
+</tbody></table>
+<p>errCode 说明</p>
+<table>
+<thead>
+<tr>
+<th>errCode</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>10001</td>
+<td>系统错误</td>
+</tr>
+<tr>
+<td>10002</td>
+<td>网络错误</td>
+</tr>
+<tr>
+<td>10003</td>
+<td>文件错误</td>
+</tr>
+<tr>
+<td>10004</td>
+<td>格式错误</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>未知错误</td>
+</tr>
+</tbody></table>
+<p><strong>支持格式</strong></p>
+<table>
+<thead>
+<tr>
+<th>格式</th>
+<th>iOS</th>
+<th>Android</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>flac</td>
+<td>x</td>
+<td>√</td>
+</tr>
+<tr>
+<td>m4a</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>ogg</td>
+<td>x</td>
+<td>√</td>
+</tr>
+<tr>
+<td>ape</td>
+<td>x</td>
+<td>√</td>
+</tr>
+<tr>
+<td>amr</td>
+<td>x</td>
+<td>√</td>
+</tr>
+<tr>
+<td>wma</td>
+<td>x</td>
+<td>√</td>
+</tr>
+<tr>
+<td>wav</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>mp3</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>mp4</td>
+<td>x</td>
+<td>√</td>
+</tr>
+<tr>
+<td>aac</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>aiff</td>
+<td>√</td>
+<td>x</td>
+</tr>
+<tr>
+<td>caf</td>
+<td>√</td>
+<td>x</td>
+</tr>
+</tbody></table>
+<p><strong>示例</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const innerAudioContext &#x3D; uni.createInnerAudioContext();</span><br><span class="line">innerAudioContext.autoplay &#x3D; true;</span><br><span class="line">innerAudioContext.src &#x3D; &#39;https:&#x2F;&#x2F;vkceyugu.cdn.bspapp.com&#x2F;VKCEYUGU-hello-uniapp&#x2F;2cc220e0-c27a-11ea-9dfb-6da8e309e0d8.mp3&#39;;</span><br><span class="line">innerAudioContext.onPlay(() &#x3D;&gt; &#123;</span><br><span class="line">  console.log(&#39;开始播放&#39;);</span><br><span class="line">&#125;);</span><br><span class="line">innerAudioContext.onError((res) &#x3D;&gt; &#123;</span><br><span class="line">  console.log(res.errMsg);</span><br><span class="line">  console.log(res.errCode);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p><strong>tips</strong></p>
+<ul>
+<li>如需音频的倍速播放，可通过video的倍速播放替代实现。插件市场有封装好的插件<a target="_blank" rel="noopener" href="https://ext.dcloud.net.cn/search?q=%E9%9F%B3%E9%A2%91%E5%80%8D%E9%80%9F%E6%92%AD%E6%94%BE">音频倍速播放</a></li>
+<li>如果需要带ui的音频播放器样式，可以在插件市场搜索相关<a target="_blank" rel="noopener" href="https://ext.dcloud.net.cn/search?q=audio">插件</a></li>
+</ul>
+<h3 id="2-视频组件控制"><a href="#2-视频组件控制" class="headerlink" title="2.视频组件控制"></a>2.视频组件控制</h3><h4 id="uni-createVideoContext-videoId-this"><a href="#uni-createVideoContext-videoId-this" class="headerlink" title="uni.createVideoContext(videoId, this)"></a><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/video-context?id=createvideocontext">uni.createVideoContext(videoId, this)</a></h4><p>创建并返回 video 上下文 videoContext 对象。在自定义组件下，第二个参数传入组件实例this，以操作组件内 <code>&lt;video&gt;</code> 组件。</p>
+<p><strong>平台差异说明</strong></p>
+<table>
+<thead>
+<tr>
+<th>App</th>
+<th>H5</th>
+<th>微信小程序</th>
+<th>支付宝小程序</th>
+<th>百度小程序</th>
+<th>字节跳动小程序</th>
+<th>QQ小程序</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>基础库版本&gt;=1.10.0</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+</tbody></table>
+<p><strong>videoContext 对象的方法列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>参数</th>
+<th>说明</th>
+<th>平台差异说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>play</td>
+<td>无</td>
+<td>播放</td>
+<td></td>
+</tr>
+<tr>
+<td>pause</td>
+<td>无</td>
+<td>暂停</td>
+<td></td>
+</tr>
+<tr>
+<td>seek</td>
+<td>position</td>
+<td>跳转到指定位置，单位 s</td>
+<td></td>
+</tr>
+<tr>
+<td>stop</td>
+<td></td>
+<td>停止视频</td>
+<td>微信小程序</td>
+</tr>
+<tr>
+<td>sendDanmu</td>
+<td>danmu</td>
+<td>发送弹幕，danmu 包含两个属性 text, color</td>
+<td></td>
+</tr>
+<tr>
+<td>playbackRate</td>
+<td>rate</td>
+<td>设置倍速播放，支持的倍率有 0.5/0.8/1.0/1.25/1.5。微信基础库2.6.3 起支持 2.0 倍速</td>
+<td></td>
+</tr>
+<tr>
+<td>requestFullScreen</td>
+<td>无</td>
+<td>进入全屏，可传入{direction}参数，详见 video 组件文档</td>
+<td></td>
+</tr>
+<tr>
+<td>exitFullScreen</td>
+<td>无</td>
+<td>退出全屏</td>
+<td></td>
+</tr>
+<tr>
+<td>showStatusBar</td>
+<td>无</td>
+<td>显示状态栏，仅在iOS全屏下有效</td>
+<td>微信小程序、百度小程序、QQ小程序</td>
+</tr>
+<tr>
+<td>hideStatusBar</td>
+<td>无</td>
+<td>隐藏状态栏，仅在iOS全屏下有效</td>
+<td>微信小程序、百度小程序、QQ小程序</td>
+</tr>
+</tbody></table>
+<p><strong>注意：</strong></p>
+<ul>
+<li>app-nvue 平台 2.2.5+ 支持 uni.createVideoContext(videoId, this)</li>
+<li>app-nvue 平台 2.2.5以下使用本API，需同时设置组件属性id和ref <code>&lt;video id=&quot;video1&quot; ref=&quot;video1&quot;&gt;&lt;/video&gt;</code>，或者直接使用 ref，例如 <code>this.$refs.video1</code></li>
+</ul>
+<p><strong>示例</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;view&gt;</span><br><span class="line">        &lt;view class&#x3D;&quot;page-body&quot;&gt;</span><br><span class="line">            &lt;view class&#x3D;&quot;page-section&quot;&gt;</span><br><span class="line">                &lt;video id&#x3D;&quot;myVideo&quot; src&#x3D;&quot;http:&#x2F;&#x2F;img.cdn.qiniu.dcloud.net.cn&#x2F;wap2appvsnative.mp4&quot; @error&#x3D;&quot;videoErrorCallback&quot; :danmu-list&#x3D;&quot;danmuList&quot;</span><br><span class="line">                    enable-danmu danmu-btn controls&gt;&lt;&#x2F;video&gt;</span><br><span class="line"></span><br><span class="line">                &lt;view class&#x3D;&quot;uni-list&quot;&gt;</span><br><span class="line">                    &lt;view class&#x3D;&quot;uni-list-cell&quot;&gt;</span><br><span class="line">                        &lt;view&gt;</span><br><span class="line">                            &lt;view class&#x3D;&quot;uni-label&quot;&gt;弹幕内容&lt;&#x2F;view&gt;</span><br><span class="line">                        &lt;&#x2F;view&gt;</span><br><span class="line">                        &lt;view class&#x3D;&quot;uni-list-cell-db&quot;&gt;</span><br><span class="line">                            &lt;input @blur&#x3D;&quot;bindInputBlur&quot; class&#x3D;&quot;uni-input&quot; type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;在此处输入弹幕内容&quot; &#x2F;&gt;</span><br><span class="line">                        &lt;&#x2F;view&gt;</span><br><span class="line">                    &lt;&#x2F;view&gt;</span><br><span class="line">                &lt;&#x2F;view&gt;</span><br><span class="line">                &lt;view class&#x3D;&quot;btn-area&quot;&gt;</span><br><span class="line">                    &lt;button @tap&#x3D;&quot;bindSendDanmu&quot; class&#x3D;&quot;page-body-button&quot; formType&#x3D;&quot;submit&quot;&gt;发送弹幕&lt;&#x2F;button&gt;</span><br><span class="line">                &lt;&#x2F;view&gt;</span><br><span class="line">            &lt;&#x2F;view&gt;</span><br><span class="line">        &lt;&#x2F;view&gt;</span><br><span class="line">    &lt;&#x2F;view&gt;</span><br><span class="line">&lt;&#x2F;template&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">    data() &#123;</span><br><span class="line">        return &#123;</span><br><span class="line">            title: &#39;video&#39;,</span><br><span class="line">            src: &#39;&#39;,</span><br><span class="line">            inputValue: &#39;&#39;,</span><br><span class="line">            danmuList: [&#123;</span><br><span class="line">                    text: &#39;第 1s 出现的弹幕&#39;,</span><br><span class="line">                    color: &#39;#ff0000&#39;,</span><br><span class="line">                    time: 1</span><br><span class="line">                &#125;,</span><br><span class="line">                &#123;</span><br><span class="line">                    text: &#39;第 3s 出现的弹幕&#39;,</span><br><span class="line">                    color: &#39;#ff00ff&#39;,</span><br><span class="line">                    time: 3</span><br><span class="line">                &#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    onReady: function (res) &#123;</span><br><span class="line">        this.videoContext &#x3D; uni.createVideoContext(&#39;myVideo&#39;)</span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">        bindInputBlur: function (e) &#123;</span><br><span class="line">            this.inputValue &#x3D; e.target.value</span><br><span class="line">        &#125;,</span><br><span class="line">        bindButtonTap: function () &#123;</span><br><span class="line">            var that &#x3D; this</span><br><span class="line">            uni.chooseVideo(&#123;</span><br><span class="line">                sourceType: [&#39;album&#39;, &#39;camera&#39;],</span><br><span class="line">                maxDuration: 60,</span><br><span class="line">                camera: [&#39;front&#39;, &#39;back&#39;],</span><br><span class="line">                success: function (res) &#123;</span><br><span class="line">                    this.src &#x3D; res.tempFilePath</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;,</span><br><span class="line">        bindSendDanmu: function () &#123;</span><br><span class="line">            this.videoContext.sendDanmu(&#123;</span><br><span class="line">                text: this.inputValue,</span><br><span class="line">                color: this.getRandomColor()</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;,</span><br><span class="line">        videoErrorCallback: function (e) &#123;</span><br><span class="line">            console.log(&#39;视频错误信息:&#39;)</span><br><span class="line">            console.log(e.target.errMsg)</span><br><span class="line">        &#125;,</span><br><span class="line">        getRandomColor: function () &#123;</span><br><span class="line">            const rgb &#x3D; []</span><br><span class="line">            for (let i &#x3D; 0; i &lt; 3; ++i) &#123;</span><br><span class="line">                let color &#x3D; Math.floor(Math.random() * 256).toString(16)</span><br><span class="line">                color &#x3D; color.length &#x3D;&#x3D; 1 ? &#39;0&#39; + color : color</span><br><span class="line">                rgb.push(color)</span><br><span class="line">            &#125;</span><br><span class="line">            return &#39;#&#39; + rgb.join(&#39;&#39;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-相机组件控制"><a href="#3-相机组件控制" class="headerlink" title="3.相机组件控制"></a>3.相机组件控制</h3><h4 id="uni-createCameraContext"><a href="#uni-createCameraContext" class="headerlink" title="uni.createCameraContext()"></a><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/camera-context?id=createcameracontext">uni.createCameraContext()</a></h4><p>创建并返回 camera 组件的上下文 cameraContext 对象。</p>
+<p><strong>平台差异说明</strong></p>
+<table>
+<thead>
+<tr>
+<th>App</th>
+<th>H5</th>
+<th>微信小程序</th>
+<th>支付宝小程序</th>
+<th>百度小程序</th>
+<th>字节跳动小程序</th>
+<th>QQ小程序</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>x</td>
+<td>x</td>
+<td>√</td>
+<td>x</td>
+<td>√</td>
+<td>x</td>
+<td>√</td>
+</tr>
+</tbody></table>
+<p>本API为 camera 组件配套的js API，与 camera 组件的平台兼容性相同，可实现非全屏摄像头。App端可通过<a target="_blank" rel="noopener" href="https://www.html5plus.org/doc/zh_cn/camera.html">plus.camera</a>实现全屏摄像头。</p>
+<p><strong>cameraContext 对象的方法列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>takePhoto</td>
+<td>Object</td>
+<td>拍照，可指定质量，成功则返回图片路径。</td>
+</tr>
+<tr>
+<td>setZoom</td>
+<td>Object</td>
+<td>设置缩放级别 <strong>微信小程序 2.10.0+ 支持</strong></td>
+</tr>
+<tr>
+<td>startRecord</td>
+<td>Object</td>
+<td>开始录像</td>
+</tr>
+<tr>
+<td>stopRecord</td>
+<td>Object</td>
+<td>结束录像，成功则返回封面与视频。</td>
+</tr>
+<tr>
+<td>onCameraFrame</td>
+<td>Function</td>
+<td>获取 Camera 实时帧数据。仅<code>微信小程序平台</code>支持，<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/CameraContext.onCameraFrame.html">规范详情</a></td>
+</tr>
+</tbody></table>
+<h4 id="cameraContext-takePhoto"><a href="#cameraContext-takePhoto" class="headerlink" title="cameraContext.takePhoto"></a><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/camera-context?id=cameracontexttakephoto">cameraContext.takePhoto</a></h4><p><strong>takePhoto 的 Object 参数列表：</strong></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>quality</td>
+<td>String</td>
+<td>否</td>
+<td>成像质量，值为high（高质量）、normal（普通质量）、low（低质量），默认normal</td>
+</tr>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>否</td>
+<td>接口调用成功的回调函数 ，返回照片文件的临时路径，res = { tempImagePath }</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+</tr>
+</tbody></table>
+<h4 id="cameraContext-setZoom"><a href="#cameraContext-setZoom" class="headerlink" title="cameraContext.setZoom"></a><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/camera-context?id=cameracontextsetzoom">cameraContext.setZoom</a></h4><p><strong>setZoom 的 Object 参数列表：</strong></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>zoom</td>
+<td>String</td>
+<td>是</td>
+<td>缩放级别，范围[1, maxZoom]。zoom 可取小数，精确到小数后一位。maxZoom 可在 @initdone 返回值中获取。</td>
+</tr>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>否</td>
+<td>接口调用成功的回调函数</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+</tr>
+</tbody></table>
+<h4 id="cameraContext-startRecord"><a href="#cameraContext-startRecord" class="headerlink" title="cameraContext.startRecord"></a><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/camera-context?id=cameracontextstartrecord">cameraContext.startRecord</a></h4><p><strong>startRecord 的 Object 参数列表：</strong></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>timeoutCallback</td>
+<td>Function</td>
+<td>否</td>
+<td>接超过30s或页面 onHide 时会结束录像</td>
+</tr>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>否</td>
+<td>接口调用成功的回调函数</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+</tr>
+</tbody></table>
+<h4 id="cameraContext-stopRecord"><a href="#cameraContext-stopRecord" class="headerlink" title="cameraContext.stopRecord"></a><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/camera-context?id=cameracontextstoprecord">cameraContext.stopRecord</a></h4><p><strong>stopRecord 的 Object 参数列表：</strong></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>默认值</th>
+<th>必填</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>compressed</td>
+<td>Boolean</td>
+<td>false</td>
+<td>否</td>
+<td>启动视频压缩，压缩效果同 <code>chooseVideo</code> ,<strong>微信小程序 2.10.0+ 支持</strong>｜</td>
+</tr>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td></td>
+<td>否</td>
+<td>接口调用成功的回调函数 ，返回封面与视频的临时路径，res = { tempThumbPath, tempVideoPath }。</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td></td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td></td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+</tr>
+</tbody></table>
+<p><strong>注意</strong></p>
+<ul>
+<li>App下实现OCR等证件识别等需求，可在插件市场获取原生插件，<a target="_blank" rel="noopener" href="https://ext.dcloud.net.cn/plugin?id=135">https://ext.dcloud.net.cn/plugin?id=135</a></li>
+<li>微信小程序下实现OCR等证件识别等需求，插件市场也有封装，搜索 <a target="_blank" rel="noopener" href="https://ext.dcloud.net.cn/search?q=ocr">ocr</a> 可见。</li>
+<li>可以通过用户授权API来判断用户是否给应用授予摄像头的访问权限<a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/other/authorize">https://uniapp.dcloud.io/api/other/authorize</a></li>
+</ul>
+<h3 id="4-直播组件控制"><a href="#4-直播组件控制" class="headerlink" title="4.直播组件控制"></a>4.直播组件控制</h3><h4 id="uni-createLivePlayerContext-livePlayerId-this"><a href="#uni-createLivePlayerContext-livePlayerId-this" class="headerlink" title="uni.createLivePlayerContext(livePlayerId, this)"></a><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/live-player-context?id=createliveplayercontext">uni.createLivePlayerContext(livePlayerId, this)</a></h4><p>创建 live-player 上下文 livePlayerContext 对象。注意是直播的播放而不是推流。</p>
+<p><strong>平台差异说明</strong></p>
+<table>
+<thead>
+<tr>
+<th>App</th>
+<th>H5</th>
+<th>微信小程序</th>
+<th>支付宝小程序</th>
+<th>百度小程序</th>
+<th>字节跳动小程序</th>
+<th>QQ小程序</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>见下</td>
+<td>x</td>
+<td>√</td>
+<td>x</td>
+<td>√</td>
+<td>x</td>
+<td>√</td>
+</tr>
+</tbody></table>
+<p>App平台的直播播放，不使用此API，而直接使用video的API。</p>
+<p><strong>参数说明</strong></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+<th>平台差异说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>livePlayerId</td>
+<td><code>&lt;live-player&gt;</code> 组件 id</td>
+<td></td>
+</tr>
+<tr>
+<td>this</td>
+<td>在自定义组件下，当前组件实例的 this，以操作组件内 <code>&lt;live-player&gt;</code> 组件</td>
+<td>微信小程序</td>
+</tr>
+</tbody></table>
+<p><strong>livePlayerContext 对象的方法列表：</strong></p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>play</td>
+<td>Object</td>
+<td>播放</td>
+</tr>
+<tr>
+<td>stop</td>
+<td>Object</td>
+<td>停止</td>
+</tr>
+<tr>
+<td>mute</td>
+<td>Object</td>
+<td>静音</td>
+</tr>
+<tr>
+<td>pause</td>
+<td>Object</td>
+<td>暂停</td>
+</tr>
+<tr>
+<td>resume</td>
+<td>Object</td>
+<td>恢复</td>
+</tr>
+<tr>
+<td>requestFullScreen</td>
+<td>Object</td>
+<td>进入全屏</td>
+</tr>
+<tr>
+<td>exitFullScreen</td>
+<td>Object</td>
+<td>退出全屏</td>
+</tr>
+</tbody></table>
+<p><strong>requestFullScreen 的 Object 参数列表：</strong></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>direction</td>
+<td>Number</td>
+<td>是</td>
+<td>设置全屏时的方向，有效值为 0（正常竖向）, 90（屏幕逆时针90度）, -90（屏幕顺时针90度）。</td>
+</tr>
+<tr>
+<td>success</td>
+<td>Function</td>
+<td>否</td>
+<td>接口调用成功的回调函数。</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>否</td>
+<td>接口调用失败的回调函数。</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）。</td>
+</tr>
+</tbody></table>
+<p><strong>其他方法的 Object 参数列表：</strong></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>success</td>
+<td>Function</td>
+<td>否</td>
+<td>接口调用成功的回调函数</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>Function</td>
+<td>否</td>
+<td>接口调用失败的回调函数</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>Function</td>
+<td>否</td>
+<td>接口调用结束的回调函数（调用成功、失败都会执行）</td>
+</tr>
+</tbody></table>
+<h4 id="uni-createLivePusherContext-livePusherId-this"><a href="#uni-createLivePusherContext-livePusherId-this" class="headerlink" title="uni.createLivePusherContext(livePusherId, this)"></a><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/live-player-context?id=createlivepushercontext">uni.createLivePusherContext(livePusherId, this)</a></h4><p>创建 live-pusher 上下文 livePusherContext 对象。</p>
+<p><strong>平台差异说明</strong></p>
+<table>
+<thead>
+<tr>
+<th>App</th>
+<th>H5</th>
+<th>微信小程序</th>
+<th>支付宝小程序</th>
+<th>百度小程序</th>
+<th>字节跳动小程序</th>
+<th>QQ小程序</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>见下</td>
+<td>x</td>
+<td>√</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>√</td>
+</tr>
+</tbody></table>
+<ul>
+<li>app-nvue 平台 2.2.5+ 支持 uni.createLivePusherContext(livePusherId, this)</li>
+<li>app-nvue 平台 2.2.5以下，需要同时设置组件属性id和ref <code>&lt;live-pusher id=&quot;livepusher1&quot; ref=&quot;livepusher1&quot;&gt;&lt;/live-pusher&gt;</code>，或者直接使用 ref，例如 <code>this.$refs.livepusher1</code></li>
+<li>app-vue 平台，需要编写条件编译代码，使用 <code>plus.video.LivePusher</code>，<a target="_blank" rel="noopener" href="https://ask.dcloud.net.cn/article/13416">业务指南</a>、<a target="_blank" rel="noopener" href="http://www.html5plus.org/doc/zh_cn/video.html#plus.video.LivePusher">规范文档</a></li>
+</ul>
+<p>使用nvue做直播，比使用vue的优势有：</p>
+<ol>
+<li>nvue可一套代码直接编译到App和微信</li>
+<li>nvue的cover-view比vue的cover-view更强大，在视频上绘制元素更容易。如果只考虑App端的话，不用cover-view，任意组件都可以覆盖live-pusher组件</li>
+<li>若需要视频内嵌在swiper里上下滑动（类抖音、映客首页模式），App端只有nvue才能实现 当然nvue相比vue的坏处是css写法受限，如果只开发微信小程序，不考虑App，那么使用vue页面也是一样的。</li>
+</ol>
+<p><strong>参数说明</strong></p>
+<p>设置live-pusher组件的推流地址，推流视频模式等。</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>默认值</th>
+<th>必填</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>url</td>
+<td>string</td>
+<td></td>
+<td>是</td>
+<td>推流地址，支持RTMP协议。</td>
+</tr>
+<tr>
+<td>mode</td>
+<td>string</td>
+<td></td>
+<td>否</td>
+<td>推流视频模式，可取值：SD（标清）, HD（高清）, FHD（超清）。</td>
+</tr>
+<tr>
+<td>muted</td>
+<td>Boolean</td>
+<td>false</td>
+<td>否</td>
+<td>是否静音。</td>
+</tr>
+<tr>
+<td>enable-camera</td>
+<td>Boolean</td>
+<td>true</td>
+<td>否</td>
+<td>开启摄像头。</td>
+</tr>
+<tr>
+<td>auto-focus</td>
+<td>Boolean</td>
+<td>true</td>
+<td>否</td>
+<td>自动聚集。</td>
+</tr>
+<tr>
+<td>beauty</td>
+<td>Number</td>
+<td>0</td>
+<td>否</td>
+<td>美颜，取值范围 0-9（iOS取值范围为1） ，0 表示关闭。</td>
+</tr>
+<tr>
+<td>whiteness</td>
+<td>Number</td>
+<td>0</td>
+<td>否</td>
+<td>美白，取值范围 0-9（iOS取值范围为1） ，0 表示关闭。</td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/live-player-context?id=api">API</a></p>
+<p><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/live-player-context?id=start">start(callback)</a></p>
+<blockquote>
+<p>开始推流</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/live-player-context?id=callback-%E8%BF%94%E5%9B%9E-object-%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E">callback 返回 Object 参数说明</a></p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>type</td>
+<td>String</td>
+<td>“success” 表示成功， “fail” 表示失败</td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/live-player-context?id=pause">pause(callback)</a></p>
+<blockquote>
+<p>暂停推流</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/live-player-context?id=callback-%E8%BF%94%E5%9B%9E-object-%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E-1">callback 返回 Object 参数说明</a></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>type</td>
+<td>String</td>
+<td>“success” 表示成功， “fail” 表示失败</td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/live-player-context?id=resume">resume(callback)</a></p>
+<blockquote>
+<p>恢复推流</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/live-player-context?id=callback-%E8%BF%94%E5%9B%9E-object-%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E-2">callback 返回 Object 参数说明</a></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>type</td>
+<td>String</td>
+<td>“success” 表示成功， “fail” 表示失败</td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/live-player-context?id=stop">stop(callback)</a></p>
+<blockquote>
+<p>停止推流</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/live-player-context?id=callback-%E8%BF%94%E5%9B%9E-object-%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E-3">callback 返回 Object 参数说明</a></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>type</td>
+<td>String</td>
+<td>“success” 表示成功， “fail” 表示失败</td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/live-player-context?id=switchcamera">switchCamera(callback)</a></p>
+<blockquote>
+<p>切换前后摄像头</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/live-player-context?id=callback-%E8%BF%94%E5%9B%9E-object-%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E-4">callback 返回 Object 参数说明</a></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>type</td>
+<td>String</td>
+<td>“success” 表示成功， “fail” 表示失败</td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/live-player-context?id=snapshot">snapshot(callback)</a></p>
+<blockquote>
+<p>快照</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/live-player-context?id=callback-%E8%BF%94%E5%9B%9E-object-%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E-5">callback 返回 Object 参数说明</a></p>
+<p><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/live-player-context?id=%E6%88%90%E5%8A%9F%E6%97%B6%E7%9A%84%E5%9B%9E%E8%B0%83">成功时的回调</a></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>type</td>
+<td>string</td>
+<td>“success” 表示成功, “fail” 表示失败</td>
+</tr>
+<tr>
+<td>code</td>
+<td>Number</td>
+<td>对应code码</td>
+</tr>
+<tr>
+<td>message</td>
+<td>object</td>
+<td>{width:”快照图片宽度”,height:”快照图片高度”,tempImagePath:”快照图片路径”}。</td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/live-player-context?id=%E5%A4%B1%E8%B4%A5%E7%9A%84%E5%9B%9E%E8%B0%83">失败的回调</a></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>type</td>
+<td>string</td>
+<td>“fail” 表示失败</td>
+</tr>
+<tr>
+<td>code</td>
+<td>Number</td>
+<td></td>
+</tr>
+<tr>
+<td>message</td>
+<td>object</td>
+<td></td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/live-player-context?id=startpreview">startPreview(callback)</a></p>
+<blockquote>
+<p>开启摄像头预览</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/live-player-context?id=callback-%E8%BF%94%E5%9B%9E-object-%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E-6">callback 返回 Object 参数说明</a></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>type</td>
+<td>String</td>
+<td>“success” 表示成功， “fail” 表示失败</td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/live-player-context?id=stoppreview">stopPreview(callback)</a></p>
+<blockquote>
+<p>关闭摄像头预览</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/live-player-context?id=callback-%E8%BF%94%E5%9B%9E-object-%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E-7">callback 返回 Object 参数说明</a></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>type</td>
+<td>String</td>
+<td>“success” 表示成功， “fail” 表示失败</td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/live-player-context?id=%E4%BA%8B%E4%BB%B6">事件</a></p>
+<p><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/live-player-context?id=statechange">statechange</a></p>
+<blockquote>
+<p>状态变化事件</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/live-player-context?id=%E8%BF%94%E5%9B%9E%E5%8F%82%E6%95%B0%EF%BC%88detail%EF%BC%89%E7%9A%84%E8%AF%A6%E7%BB%86%E8%AF%B4%E6%98%8E">返回参数（detail）的详细说明</a></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>code</td>
+<td>Number</td>
+<td></td>
+</tr>
+<tr>
+<td>message</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/live-player-context?id=netstatus">netstatus</a></p>
+<blockquote>
+<p>网络状态通知事件</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/live-player-context?id=%E5%AE%89%E5%8D%93-%E8%BF%94%E5%9B%9E%E5%8F%82%E6%95%B0%EF%BC%88detail%EF%BC%89%E7%9A%84%E8%AF%A6%E7%BB%86%E8%AF%B4%E6%98%8E">安卓 返回参数（detail）的详细说明</a></p>
+<table>
+<thead>
+<tr>
+<th>键名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>videoBitrate</td>
+<td>当前视频编/码器输出的比特率，单位 kbps</td>
+</tr>
+<tr>
+<td>audioBitrate</td>
+<td>当前音频编/码器输出的比特率，单位 kbps</td>
+</tr>
+<tr>
+<td>videoFPS</td>
+<td>当前视频帧率</td>
+</tr>
+<tr>
+<td>videoGOP</td>
+<td>当前视频 GOP,也就是每两个关键帧(I帧)间隔时长，单位 s</td>
+</tr>
+<tr>
+<td>netSpeed</td>
+<td>当前的发送/接收速度</td>
+</tr>
+<tr>
+<td>netJitter</td>
+<td>网络抖动情况，抖动越大，网络越不稳定</td>
+</tr>
+<tr>
+<td>videoWidth</td>
+<td>视频画面的宽度</td>
+</tr>
+<tr>
+<td>videoHeight</td>
+<td>视频画面的高度</td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/live-player-context?id=ios-%E8%BF%94%E5%9B%9E%E5%8F%82%E6%95%B0%EF%BC%88detail%EF%BC%89%E7%9A%84%E8%AF%A6%E7%BB%86%E8%AF%B4%E6%98%8E">iOS 返回参数（detail）的详细说明</a></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>code</td>
+<td>Number</td>
+<td>code码</td>
+</tr>
+<tr>
+<td>message</td>
+<td>string</td>
+<td>具体的网络状态信息</td>
+</tr>
+</tbody></table>
+<p><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/live-player-context?id=error">error</a></p>
+<blockquote>
+<p>渲染错误事件</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/live-player-context?id=%E8%BF%94%E5%9B%9E%E5%8F%82%E6%95%B0%EF%BC%88detail%EF%BC%89%E7%9A%84%E8%AF%A6%E7%BB%86%E8%AF%B4%E6%98%8E-1">返回参数（detail）的详细说明</a></p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>errCode</td>
+<td>Number</td>
+<td></td>
+</tr>
+<tr>
+<td>errMsg</td>
+<td>string</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="5-背景音频播放管理"><a href="#5-背景音频播放管理" class="headerlink" title="5.背景音频播放管理"></a>5.背景音频播放管理</h3><h4 id="uni-getBackgroundAudioManager"><a href="#uni-getBackgroundAudioManager" class="headerlink" title="uni.getBackgroundAudioManager()"></a><a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/background-audio-manager?id=getbackgroundaudiomanager">uni.getBackgroundAudioManager()</a></h4><p>获取<strong>全局唯一</strong>的背景音频管理器 <code>backgroundAudioManager</code>。</p>
+<p>背景音频，不是游戏的背景音乐，而是类似QQ音乐那样，App在后台时，仍然在播放音乐。如果你不需要在App切后台时继续播放，那么不应该使用本API，而应该使用普通音频API<a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/api/media/audio-context">uni.createInnerAudioContext</a>。</p>
+<p><strong>平台差异说明</strong></p>
+<table>
+<thead>
+<tr>
+<th>App</th>
+<th>H5</th>
+<th>微信小程序</th>
+<th>支付宝小程序</th>
+<th>百度小程序</th>
+<th>字节跳动小程序</th>
+<th>QQ小程序</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>√</td>
+<td>x</td>
+<td>√</td>
+<td>x</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+</tbody></table>
+<p><strong>backgroundAudioManager 对象的属性列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>说明</th>
+<th>只读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>duration</td>
+<td>Number</td>
+<td>当前音频的长度（单位：s），只有在当前有合法的 src 时返回</td>
+<td>是</td>
+</tr>
+<tr>
+<td>currentTime</td>
+<td>Number</td>
+<td>当前音频的播放位置（单位：s），只有在当前有合法的 src 时返回</td>
+<td>是</td>
+</tr>
+<tr>
+<td>paused</td>
+<td>Boolean</td>
+<td>当前是是否暂停或停止状态，true 表示暂停或停止，false 表示正在播放</td>
+<td>是</td>
+</tr>
+<tr>
+<td>src</td>
+<td>String</td>
+<td>音频的数据源，默认为空字符串，<strong>当设置了新的 src 时，会自动开始播放，</strong>目前支持的格式有 m4a, aac, mp3, wav</td>
+<td>否</td>
+</tr>
+<tr>
+<td>startTime</td>
+<td>Number</td>
+<td>音频开始播放的位置（单位：s）</td>
+<td>否</td>
+</tr>
+<tr>
+<td>buffered</td>
+<td>Number</td>
+<td>音频缓冲的时间点，仅保证当前播放时间点到此时间点内容已缓冲。</td>
+<td>是</td>
+</tr>
+<tr>
+<td>title</td>
+<td>String</td>
+<td>音频标题，用于做原生音频播放器音频标题。原生音频播放器中的分享功能，分享出去的卡片标题，也将使用该值。</td>
+<td>否</td>
+</tr>
+<tr>
+<td>epname</td>
+<td>String</td>
+<td>专辑名，原生音频播放器中的分享功能，分享出去的卡片简介，也将使用该值。</td>
+<td>否</td>
+</tr>
+<tr>
+<td>singer</td>
+<td>String</td>
+<td>歌手名，原生音频播放器中的分享功能，分享出去的卡片简介，也将使用该值。</td>
+<td>否</td>
+</tr>
+<tr>
+<td>coverImgUrl</td>
+<td>String</td>
+<td>封面图url，用于做原生音频播放器背景图。原生音频播放器中的分享功能，分享出去的卡片配图及背景也将使用该图。</td>
+<td>否</td>
+</tr>
+<tr>
+<td>webUrl</td>
+<td>String</td>
+<td>页面链接，原生音频播放器中的分享功能，分享出去的卡片简介，也将使用该值。</td>
+<td>否</td>
+</tr>
+<tr>
+<td>protocol</td>
+<td>String</td>
+<td>音频协议。默认值为 ‘http’，设置 ‘hls’ 可以支持播放 HLS 协议的直播音频，App平台暂不支持</td>
+<td>否</td>
+</tr>
+</tbody></table>
+<p><strong>backgroundAudioManager 对象的方法列表</strong></p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>play</td>
+<td></td>
+<td>播放</td>
+</tr>
+<tr>
+<td>pause</td>
+<td></td>
+<td>暂停</td>
+</tr>
+<tr>
+<td>stop</td>
+<td></td>
+<td>停止</td>
+</tr>
+<tr>
+<td>seek</td>
+<td>position</td>
+<td>跳转到指定位置，单位 s</td>
+</tr>
+<tr>
+<td>onCanplay</td>
+<td>callback</td>
+<td>背景音频进入可以播放状态，但不保证后面可以流畅播放</td>
+</tr>
+<tr>
+<td>onPlay</td>
+<td>callback</td>
+<td>背景音频播放事件</td>
+</tr>
+<tr>
+<td>onPause</td>
+<td>callback</td>
+<td>背景音频暂停事件</td>
+</tr>
+<tr>
+<td>onStop</td>
+<td>callback</td>
+<td>背景音频停止事件</td>
+</tr>
+<tr>
+<td>onEnded</td>
+<td>callback</td>
+<td>背景音频自然播放结束事件</td>
+</tr>
+<tr>
+<td>onTimeUpdate</td>
+<td>callback</td>
+<td>背景音频播放进度更新事件</td>
+</tr>
+<tr>
+<td>onPrev</td>
+<td>callback</td>
+<td>用户在系统音乐播放面板点击上一曲事件（iOS only）</td>
+</tr>
+<tr>
+<td>onNext</td>
+<td>callback</td>
+<td>用户在系统音乐播放面板点击下一曲事件（iOS only）</td>
+</tr>
+<tr>
+<td>onError</td>
+<td>callback</td>
+<td>背景音频播放错误事件</td>
+</tr>
+<tr>
+<td>onWaiting</td>
+<td>callback</td>
+<td>音频加载中事件，当音频因为数据不足，需要停下来加载时会触发</td>
+</tr>
+</tbody></table>
+<p>errCode 说明</p>
+<table>
+<thead>
+<tr>
+<th>errCode</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>10001</td>
+<td>系统错误</td>
+</tr>
+<tr>
+<td>10002</td>
+<td>网络错误</td>
+</tr>
+<tr>
+<td>10003</td>
+<td>文件错误</td>
+</tr>
+<tr>
+<td>10004</td>
+<td>格式错误</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>未知错误</td>
+</tr>
+</tbody></table>
+<p><strong>示例</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const bgAudioMannager &#x3D; uni.getBackgroundAudioManager();</span><br><span class="line">bgAudioMannager.title &#x3D; &#39;致爱丽丝&#39;;</span><br><span class="line">bgAudioMannager.singer &#x3D; &#39;暂无&#39;;</span><br><span class="line">bgAudioMannager.coverImgUrl &#x3D; &#39;https:&#x2F;&#x2F;img-cdn-qiniu.dcloud.net.cn&#x2F;uniapp&#x2F;audio&#x2F;music.jpg&#39;;</span><br><span class="line">bgAudioMannager.src &#x3D; &#39;https:&#x2F;&#x2F;img-cdn-qiniu.dcloud.net.cn&#x2F;uniapp&#x2F;audio&#x2F;music.mp3&#39;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意</strong> 因为背景音频播放耗费手机电量，所以平台都有管控，需在manifest中填写申请。</p>
+<ul>
+<li>ios App平台，背景播放需在manifest.json -&gt; app-plus -&gt; distribute -&gt; ios 节点添加 <code>&quot;UIBackgroundModes&quot;:[&quot;audio&quot;]</code> 才能保证音乐可以后台播放（打包成ipa生效）</li>
+<li>小程序平台，需在manifest.json 对应的小程序节点下，填写”requiredBackgroundModes”: [“audio”]。发布小程序时平台会审核</li>
+<li>Android App端默认不会在通知栏出现音量控制，如需此功能，需要在插件市场单独下载原生插件，<a target="_blank" rel="noopener" href="https://ext.dcloud.net.cn/search?q=%E9%80%9A%E7%9F%A5%E6%A0%8F+%E9%9F%B3%E4%B9%90%E6%8E%A7%E5%88%B6">详见</a></li>
+</ul>
+
+  </div>
+  <!--评论块-->
+    
+
+</article>
+<nav class="post-nav">
+  <!-- Prev Nav -->
+    
+  <a href="/posts/4a17b156/" id="post_nav-newer" class="post-nav-content prev-content">
+      新篇
+  </a>
+    
+
+
+  <!-- Next Nav -->
+    
+  <a href="/posts/48922786/" id="post_nav-older" class="post-nav-content next-content">
+      旧篇
+  </a>
+    
+</nav>
+<div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
+<div class="post-toc-none"><p>(无)</p></div>
+<div class="post-toc-box">
+    <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-%E9%9F%B3%E9%A2%91%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6"><span class="post-toc-number">1.</span> <span class="post-toc-text">1.音频组件控制</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#uni-createInnerAudioContext"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">uni.createInnerAudioContext()</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-%E8%A7%86%E9%A2%91%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6"><span class="post-toc-number">2.</span> <span class="post-toc-text">2.视频组件控制</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#uni-createVideoContext-videoId-this"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">uni.createVideoContext(videoId, this)</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-%E7%9B%B8%E6%9C%BA%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6"><span class="post-toc-number">3.</span> <span class="post-toc-text">3.相机组件控制</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#uni-createCameraContext"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">uni.createCameraContext()</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#cameraContext-takePhoto"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">cameraContext.takePhoto</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#cameraContext-setZoom"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">cameraContext.setZoom</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#cameraContext-startRecord"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">cameraContext.startRecord</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#cameraContext-stopRecord"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">cameraContext.stopRecord</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-%E7%9B%B4%E6%92%AD%E7%BB%84%E4%BB%B6%E6%8E%A7%E5%88%B6"><span class="post-toc-number">4.</span> <span class="post-toc-text">4.直播组件控制</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#uni-createLivePlayerContext-livePlayerId-this"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">uni.createLivePlayerContext(livePlayerId, this)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#uni-createLivePusherContext-livePusherId-this"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">uni.createLivePusherContext(livePusherId, this)</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-%E8%83%8C%E6%99%AF%E9%9F%B3%E9%A2%91%E6%92%AD%E6%94%BE%E7%AE%A1%E7%90%86"><span class="post-toc-number">5.</span> <span class="post-toc-text">5.背景音频播放管理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#uni-getBackgroundAudioManager"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">uni.getBackgroundAudioManager()</span></a></li></ol></li></ol>
+</div>
+<!--<div class="post-back"><i class="material-icons">arrow_back</i></div>-->
+<script type="text/javascript">
+    menu();
+</script>
+  </div>
+</div>
+<div id="bottom-outer">
+  <div id="bottom-inner">
+    <a  id="top-button" onfocus="this.blur();"><div class="up upinbody" style="background-color:#26A69A"><i class="material-icons material-up">vertical_align_top</i></div></a>
+
+
+<p style="line-height: 45px">Copyright ©  2017  Phoenix</p>
+<p style="line-height: 45px">Powered by <a href="https://hexo.io/" target="_blank"> Hexo </a> && Theme - <a href="https://github.com/moumao/hexo-theme-Vateral" target="_blank">Vateral</a></p>
+
+  </div>
+</div>
+
+<!--影集界面需要的资源-->
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+<script src="/js/materialize.min.js"></script>
+
+<script src="/js/main.min.js"></script>
+
+
+<script>
+    NProgress.start();
+    NProgress.done();
+    lazy();
+    links();
+    window.onpopstate = menu();
+    //pjax操作
+    $(document).pjax('a:not(.nopjax)', '#content-inner', {fragment:'#content-inner', timeout:8000});
+    $(document).on('pjax:start', NProgress.start).on('pjax:end', NProgress.done)
+        .on('pjax:end', () => {
+            dowmdiv();
+            lazy();
+            toc();
+            links();
+            menu();
+        });
+</script>
+
+</body>
+</html>

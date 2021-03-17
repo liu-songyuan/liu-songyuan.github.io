@@ -1,1 +1,232 @@
-<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"><meta http-equiv=X-UA-Compatible content="ie=edge"><link rel="shortcut icon" href=/static/favicon.ico><title>Phoenix</title><link href=/static/css/app.c64eadfc8d3abfc9d85514dba4054813.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/static/js/manifest.992b63bf2abbf3194771.js></script><script type=text/javascript src=/static/js/vendor.e12dc8c9af1f7aa12436.js></script><script type=text/javascript src=/static/js/app.bc036f9167871d39aecf.js></script></body></html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  
+  <meta name="keywords" content="网站关键字">
+  <meta name="description" content="网站简介">
+  
+  <title>Phoenix</title>
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/materialize.min.css">
+    
+      <link rel="stylesheet" href="/css/main.min.css">
+    
+  
+  <style type="text/css">
+      html{
+          font-family: sans-serif;
+          font-weight: 300;
+      }
+      @font-face {
+          font-family: 'Material Icons';
+          font-style: normal;
+          font-weight: 400;
+          src: url(/fonts/MaterialIcons-Regular.eot);
+          src: url(/fonts/MaterialIcons-Regular.woff2) format('woff2'),
+          url(/fonts/MaterialIcons-Regular.woff) format('woff'),
+          url(/fonts/MaterialIcons-Regular.ttf) format('truetype')
+      }
+  </style>
+<link rel="shortcut icon" href="/source/favicon.ico">
+</head>
+<body>
+<div id="menu-box"><a href="javascript:void(0)" id="menu" data-activates="slide-out" class="button-collapse menu" ><span class="nav-btn"></span></a></div>
+<div id="menu-outer">
+  <div id="menu-inner">
+      <ul id="slide-out" class="side-nav" >
+    <div class="nav-header"  style="background-image: url(/images/header-bg.png);background-color:#26A69A">
+    <div class="header-box"><img src="/images/header.png" ondragstart="return false;"></div>
+    <p>Jerry</p>
+    <div class="nav-link">
+        
+        <a href="http://example.com" target="_blank"> <div class="link-box twitter"></div></a>
+        
+        
+        <a  href="http://example.com" target="_blank"><div class="link-box github"></div></a>
+        
+        
+        <a href="mailto:http://example.com"><div class="link-box email"></div></a>
+        
+        
+        <a href="http://example.com" target="_blank"><div class="link-box weibo"></div></a>
+        
+        
+        <a href="http://example.com" target="_blank"> <div class="link-box zhihu"></div></a>
+        
+    </div>
+    <div class="nav-search">
+        <form id="search-form"> <!-- 搜索框相关 -->
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索..." class="search form-control" autocomplete="off" autocorrect="off"/>
+            <div class="nav-search-img"><i class="material-icons">search</i></div>
+        </form>
+        <div id="local-search-result"></div> <!-- 搜索结果区 -->
+        <p class='no-result'>无搜索结果</p>
+    </div>
+</div>
+    <!--Homepage-->
+
+<li class="nav-list">
+    <a href="/" target="_self">
+        <div class="nav-ico"><i class="material-icons">home</i> </div><p>主页</p>
+    </a>
+</li>
+
+<!--archives-->
+
+<li class="nav-list dropdown-btn">
+    <a  class=""  target="_self">
+        <div class="nav-ico"><i class="material-icons">assignment</i></div><p>归档</p><div class="dropdown-ico"><i class="material-icons">arrow_drop_down</i></div>
+    </a>
+</li>
+
+<ul class="dropdown-menu dropdown" >
+    <li class="nav-dropdown-list">
+        <a class="archive-link" href="/archives/2021/03/">三月 2021<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2020/12/">十二月 2020<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2020/10/">十月 2020<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2020/09/">九月 2020<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2020/06/">六月 2020<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2020/05/">五月 2020<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2020/04/">四月 2020<span class="archive-count">2</span></a>
+    </li>
+</ul>
+<!--categories-->
+
+<ul class="dropdown-menu dropdown" >
+    <li class="nav-dropdown-list">
+        
+    </li>
+</ul>
+<!--tags-->
+
+<li class="nav-list">
+    <a href="/archives" target="_self">
+        <div class="nav-ico"><i class="material-icons">bookmark</i> </div><p>标签</p>
+    </a>
+</li>
+
+<!--photo-->
+
+<!--friends-->
+
+<!--about-->
+
+
+</ul>
+
+  </div>
+</div>
+
+<div id="content-outer">
+  <div id="content-inner">
+    
+<article id="post">
+  <div class="post-page-title"  style="background-color:#26A69A;background-image:url(/images/random/vateral-4.png)" >
+  <h2>小程序订阅消息</h2>
+    
+  <p>作者:Jerry &nbsp&nbsp 发布于:<time datetime="2020-05-25T02:03:14.000Z">
+          2020-05-25
+    </time>
+  </p>
+    
+  </div>
+  <div class="post-page-content">
+  <p>小程序给用户推送消息原有方式是采用模板消息，用户通过表单生成formId来给推送消息，但小程序模板消息接口已于2020年1月10日下线，开发者可以使用另一种方式给用户推送消息：订阅消息。</p>
+<h2 id="请确认调试基础库的版本"><a href="#请确认调试基础库的版本" class="headerlink" title="请确认调试基础库的版本"></a>请确认调试基础库的版本</h2><p>建议使用V2.8.2及以后版本<br><img src= "/img/loading.gif" data-lazy-src="http://img1.sycdn.imooc.com/5e891b9400016c7515920692.png" alt="图片描述"></p>
+<h2 id="配置订阅消息模板"><a href="#配置订阅消息模板" class="headerlink" title="配置订阅消息模板"></a>配置订阅消息模板</h2><p>首先确认确认当前小程序的id和登录的公众平台是不是同一个，因为之前经常有同学具有多个公众平台账号，有可能是多个账号会弄混导致模板消息发送失败。</p>
+<p>在公众平台中配置模板消息，选择左边订阅消息菜单，然后点击右边添加按钮，根据自己需求选择消息模板<br><img src= "/img/loading.gif" data-lazy-src="http://img1.sycdn.imooc.com/5e891cb70001ceea24641308.png" alt="图片描述"></p>
+<h2 id="调起小程序订阅消息界面获取下发权限"><a href="#调起小程序订阅消息界面获取下发权限" class="headerlink" title="调起小程序订阅消息界面获取下发权限"></a>调起小程序订阅消息界面获取下发权限</h2><p>复制消息模板对应的模板ID，然后在小程序端调起订阅消息界面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">const templateId &#x3D; &#39;xxxxxx&#39;</span><br><span class="line">wx.requestSubscribeMessage(&#123;</span><br><span class="line">    tmplIds: [templateId],</span><br><span class="line">    success(res) &#123;</span><br><span class="line">        if (res[templateId] &#x3D;&#x3D; &#39;accept&#39;) &#123;</span><br><span class="line">            &#x2F;&#x2F;用户同意了订阅，允许订阅消息</span><br><span class="line">            wx.showToast(&#123;</span><br><span class="line">	            title: &#39;订阅成功&#39;</span><br><span class="line">            &#125;)</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">            &#x2F;&#x2F;用户拒绝了订阅，禁用订阅消息</span><br><span class="line">            wx.showToast(&#123;</span><br><span class="line">	            title: &#39;订阅失败&#39;</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    fail(err) &#123;</span><br><span class="line">    console.error(err)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="云函数端下发订阅消息"><a href="#云函数端下发订阅消息" class="headerlink" title="云函数端下发订阅消息"></a>云函数端下发订阅消息</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">try &#123;</span><br><span class="line">   const wxContext &#x3D; cloud.getWXContext()</span><br><span class="line">   const templateId &#x3D; &#39;xxxxxx</span><br><span class="line"></span><br><span class="line">   return await cloud.openapi.subscribeMessage.send(&#123;</span><br><span class="line">     touser: wxContext.OPENID,</span><br><span class="line">     page: &#39;page&#x2F;index&#x2F;index&#39;,</span><br><span class="line">     lang: &#39;zh_CN&#39;,</span><br><span class="line">     data: &#123;</span><br><span class="line">       phrase1: &#123;</span><br><span class="line">         value: &#39;上课啦&#39;</span><br><span class="line">       &#125;,</span><br><span class="line">       thing2: &#123;</span><br><span class="line">         value: &#39;小程序开发&#39;</span><br><span class="line">       &#125;,</span><br><span class="line">       thing3: &#123;</span><br><span class="line">         value: &#39;订阅消息&#39;</span><br><span class="line">       &#125;</span><br><span class="line">     &#125;,</span><br><span class="line">     templateId: templateId,</span><br><span class="line">     miniprogramState: &#39;developer&#39;</span><br><span class="line">   &#125;)</span><br><span class="line">   console.log(result)</span><br><span class="line">   return result</span><br><span class="line"> &#125; catch (err) &#123;</span><br><span class="line">   console.log(err)</span><br><span class="line">   return err</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置订阅消息权限"><a href="#设置订阅消息权限" class="headerlink" title="设置订阅消息权限"></a>设置订阅消息权限</h2><p>在当前云函数下面，新建config.json文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;permissions&quot;: &#123;</span><br><span class="line">    &quot;openapi&quot;: [</span><br><span class="line">      &quot;subscribeMessage.send&quot;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>测试订阅消息需要在真机上测试，开发工具不能测试。<br>点击真机调试，用手机扫描二维码可以测试。<br>发送完消息以后，在微信页面的服务通知内，就能够看到推送的消息了。</p>
+<h2 id="代码参考"><a href="#代码参考" class="headerlink" title="代码参考"></a>代码参考</h2><p><a target="_blank" rel="noopener" href="https://github.com/xiecheng328/subscribeMessage">https://github.com/xiecheng328/subscribeMessage</a></p>
+<h2 id="小程序开发学习建议"><a href="#小程序开发学习建议" class="headerlink" title="小程序开发学习建议"></a>小程序开发学习建议</h2><ul>
+<li><p>多看<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/">官方文档</a>，小程序的官方文档写的非常的全面，涵盖了微信小程序开发的所有知识点，大家一定要多看微信小程序官方文档</p>
+</li>
+<li><p>多逛小程序<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/community/develop/question">开发社区</a>，关于微信小程序的新功能以及更新内容都会在社区上面通知，大家遇到技术问题也可以在上面提问，会有微信团队官方工程师帮助我们解答</p>
+</li>
+<li><p>多敲代码，多练习。只有自己不断的练习才能真正的得到提高</p>
+</li>
+<li><p>分析问题和解决问题的能力。这是需要时间不断积累的，在遇到问题的时候，一定要多思考，对于有错误信息的问题一定要认真翻译错误信息，大多数的错误线索都能够被找到</p>
+</li>
+</ul>
+
+  </div>
+  <!--评论块-->
+    
+
+</article>
+<nav class="post-nav">
+  <!-- Prev Nav -->
+    
+  <a href="/posts/53701062/" id="post_nav-newer" class="post-nav-content prev-content">
+      新篇
+  </a>
+    
+
+
+  <!-- Next Nav -->
+    
+  <a href="/posts/7cff3812/" id="post_nav-older" class="post-nav-content next-content">
+      旧篇
+  </a>
+    
+</nav>
+<div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
+<div class="post-toc-none"><p>(无)</p></div>
+<div class="post-toc-box">
+    <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%AF%B7%E7%A1%AE%E8%AE%A4%E8%B0%83%E8%AF%95%E5%9F%BA%E7%A1%80%E5%BA%93%E7%9A%84%E7%89%88%E6%9C%AC"><span class="post-toc-number">1.</span> <span class="post-toc-text">请确认调试基础库的版本</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E9%85%8D%E7%BD%AE%E8%AE%A2%E9%98%85%E6%B6%88%E6%81%AF%E6%A8%A1%E6%9D%BF"><span class="post-toc-number">2.</span> <span class="post-toc-text">配置订阅消息模板</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%B0%83%E8%B5%B7%E5%B0%8F%E7%A8%8B%E5%BA%8F%E8%AE%A2%E9%98%85%E6%B6%88%E6%81%AF%E7%95%8C%E9%9D%A2%E8%8E%B7%E5%8F%96%E4%B8%8B%E5%8F%91%E6%9D%83%E9%99%90"><span class="post-toc-number">3.</span> <span class="post-toc-text">调起小程序订阅消息界面获取下发权限</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BA%91%E5%87%BD%E6%95%B0%E7%AB%AF%E4%B8%8B%E5%8F%91%E8%AE%A2%E9%98%85%E6%B6%88%E6%81%AF"><span class="post-toc-number">4.</span> <span class="post-toc-text">云函数端下发订阅消息</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%AE%BE%E7%BD%AE%E8%AE%A2%E9%98%85%E6%B6%88%E6%81%AF%E6%9D%83%E9%99%90"><span class="post-toc-number">5.</span> <span class="post-toc-text">设置订阅消息权限</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%B3%A8%E6%84%8F"><span class="post-toc-number">6.</span> <span class="post-toc-text">注意</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E4%BB%A3%E7%A0%81%E5%8F%82%E8%80%83"><span class="post-toc-number">7.</span> <span class="post-toc-text">代码参考</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0%E5%BB%BA%E8%AE%AE"><span class="post-toc-number">8.</span> <span class="post-toc-text">小程序开发学习建议</span></a></li></ol>
+</div>
+<!--<div class="post-back"><i class="material-icons">arrow_back</i></div>-->
+<script type="text/javascript">
+    menu();
+</script>
+  </div>
+</div>
+<div id="bottom-outer">
+  <div id="bottom-inner">
+    <a  id="top-button" onfocus="this.blur();"><div class="up upinbody" style="background-color:#26A69A"><i class="material-icons material-up">vertical_align_top</i></div></a>
+
+
+<p style="line-height: 45px">Copyright ©  2017  Phoenix</p>
+<p style="line-height: 45px">Powered by <a href="https://hexo.io/" target="_blank"> Hexo </a> && Theme - <a href="https://github.com/moumao/hexo-theme-Vateral" target="_blank">Vateral</a></p>
+
+  </div>
+</div>
+
+<!--影集界面需要的资源-->
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+<script src="/js/materialize.min.js"></script>
+
+<script src="/js/main.min.js"></script>
+
+
+<script>
+    NProgress.start();
+    NProgress.done();
+    lazy();
+    links();
+    window.onpopstate = menu();
+    //pjax操作
+    $(document).pjax('a:not(.nopjax)', '#content-inner', {fragment:'#content-inner', timeout:8000});
+    $(document).on('pjax:start', NProgress.start).on('pjax:end', NProgress.done)
+        .on('pjax:end', () => {
+            dowmdiv();
+            lazy();
+            toc();
+            links();
+            menu();
+        });
+</script>
+
+</body>
+</html>

@@ -1,1 +1,386 @@
-<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"><meta http-equiv=X-UA-Compatible content="ie=edge"><link rel="shortcut icon" href=/static/favicon.ico><title>Phoenix</title><link href=/static/css/app.c64eadfc8d3abfc9d85514dba4054813.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/static/js/manifest.992b63bf2abbf3194771.js></script><script type=text/javascript src=/static/js/vendor.e12dc8c9af1f7aa12436.js></script><script type=text/javascript src=/static/js/app.bc036f9167871d39aecf.js></script></body></html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  
+  <meta name="keywords" content="网站关键字">
+  <meta name="description" content="网站简介">
+  
+  <title>Phoenix</title>
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/materialize.min.css">
+    
+      <link rel="stylesheet" href="/css/main.min.css">
+    
+  
+  <style type="text/css">
+      html{
+          font-family: sans-serif;
+          font-weight: 300;
+      }
+      @font-face {
+          font-family: 'Material Icons';
+          font-style: normal;
+          font-weight: 400;
+          src: url(/fonts/MaterialIcons-Regular.eot);
+          src: url(/fonts/MaterialIcons-Regular.woff2) format('woff2'),
+          url(/fonts/MaterialIcons-Regular.woff) format('woff'),
+          url(/fonts/MaterialIcons-Regular.ttf) format('truetype')
+      }
+  </style>
+<link rel="shortcut icon" href="/source/favicon.ico">
+</head>
+<body>
+<div id="menu-box"><a href="javascript:void(0)" id="menu" data-activates="slide-out" class="button-collapse menu" ><span class="nav-btn"></span></a></div>
+<div id="menu-outer">
+  <div id="menu-inner">
+      <ul id="slide-out" class="side-nav" >
+    <div class="nav-header"  style="background-image: url(/images/header-bg.png);background-color:#26A69A">
+    <div class="header-box"><img src="/images/header.png" ondragstart="return false;"></div>
+    <p>Jerry</p>
+    <div class="nav-link">
+        
+        <a href="http://example.com" target="_blank"> <div class="link-box twitter"></div></a>
+        
+        
+        <a  href="http://example.com" target="_blank"><div class="link-box github"></div></a>
+        
+        
+        <a href="mailto:http://example.com"><div class="link-box email"></div></a>
+        
+        
+        <a href="http://example.com" target="_blank"><div class="link-box weibo"></div></a>
+        
+        
+        <a href="http://example.com" target="_blank"> <div class="link-box zhihu"></div></a>
+        
+    </div>
+    <div class="nav-search">
+        <form id="search-form"> <!-- 搜索框相关 -->
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索..." class="search form-control" autocomplete="off" autocorrect="off"/>
+            <div class="nav-search-img"><i class="material-icons">search</i></div>
+        </form>
+        <div id="local-search-result"></div> <!-- 搜索结果区 -->
+        <p class='no-result'>无搜索结果</p>
+    </div>
+</div>
+    <!--Homepage-->
+
+<li class="nav-list">
+    <a href="/" target="_self">
+        <div class="nav-ico"><i class="material-icons">home</i> </div><p>主页</p>
+    </a>
+</li>
+
+<!--archives-->
+
+<li class="nav-list dropdown-btn">
+    <a  class=""  target="_self">
+        <div class="nav-ico"><i class="material-icons">assignment</i></div><p>归档</p><div class="dropdown-ico"><i class="material-icons">arrow_drop_down</i></div>
+    </a>
+</li>
+
+<ul class="dropdown-menu dropdown" >
+    <li class="nav-dropdown-list">
+        <a class="archive-link" href="/archives/2021/03/">三月 2021<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2020/12/">十二月 2020<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2020/10/">十月 2020<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2020/09/">九月 2020<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2020/06/">六月 2020<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2020/05/">五月 2020<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2020/04/">四月 2020<span class="archive-count">2</span></a>
+    </li>
+</ul>
+<!--categories-->
+
+<ul class="dropdown-menu dropdown" >
+    <li class="nav-dropdown-list">
+        
+    </li>
+</ul>
+<!--tags-->
+
+<li class="nav-list">
+    <a href="/archives" target="_self">
+        <div class="nav-ico"><i class="material-icons">bookmark</i> </div><p>标签</p>
+    </a>
+</li>
+
+<!--photo-->
+
+<!--friends-->
+
+<!--about-->
+
+
+</ul>
+
+  </div>
+</div>
+
+<div id="content-outer">
+  <div id="content-inner">
+    
+<article id="post">
+  <div class="post-page-title"  style="background-color:#26A69A;background-image:url(/images/random/vateral-17.png)" >
+  <h2>抄笔记：尤雨溪在Vue3.0 Beta直播里聊到了这些…</h2>
+    
+  <p>作者:Jerry &nbsp&nbsp 发布于:<time datetime="2020-04-22T02:39:21.000Z">
+          2020-04-22
+    </time>
+  </p>
+    
+  </div>
+  <div class="post-page-content">
+  <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在 4 月 21 日晚，Vue 作者尤雨溪在哔哩哔哩直播分享了<code>Vue.js 3.0 Beta</code>最新进展。</p>
+<h2 id="1-全新文档RFCs"><a href="#1-全新文档RFCs" class="headerlink" title="1. 全新文档RFCs"></a>1. 全新文档<code>RFCs</code></h2><p><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zqzd824j31i70u0gpm.jpg" alt="img"></p>
+<p><code>Vue.js 3.0 Beta</code>发布后的工作重点是保证稳定性和推进各类库集成</p>
+<p>所有的进度和文档都将在全新<code>RFCs</code>文档可以看到。</p>
+<h2 id="2-六大亮点"><a href="#2-六大亮点" class="headerlink" title="2. 六大亮点"></a>2. 六大亮点</h2><p><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zd5pgiij31h80u00wy.jpg" alt="img"></p>
+<ul>
+<li><code>Performance</code>：性能更比<code>Vue 2.0</code>强。</li>
+<li><code>Tree shaking support</code>：可以将无用模块“剪辑”，仅打包需要的。</li>
+<li><code>Composition API</code>：组合<code>API</code></li>
+<li><code>Fragment, Teleport, Suspense</code>：“碎片”，<code>Teleport</code>即<code>Protal传送门</code>，“悬念”</li>
+<li><code>Better TypeScript support</code>：更优秀的 Ts 支持</li>
+<li><code>Custom Renderer API</code>：暴露了自定义渲染<code>API</code></li>
+</ul>
+<p>下面将按顺序分别描述。</p>
+<h2 id="3-Performance"><a href="#3-Performance" class="headerlink" title="3.Performance"></a>3.<code>Performance</code></h2><p><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zd63pq4j315a0iggp1.jpg" alt="img"></p>
+<ol>
+<li>重写了虚拟<code>Dom</code>的实现（且保证了兼容性，脱离模版的渲染需求旺盛）。</li>
+<li>编译模板的优化。</li>
+<li>更高效的组件初始化。</li>
+<li><code>update</code>性能提高 1.3~2 倍。</li>
+<li><code>SSR</code>速度提高了 2~3 倍。</li>
+</ol>
+<p>下面是各项性能对比</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zdapyzwj31hk0u04dz.jpg" alt="img"></p>
+<h3 id="要点-1：编译模板的优化"><a href="#要点-1：编译模板的优化" class="headerlink" title="要点 1：编译模板的优化"></a>要点 1：编译模板的优化</h3><p><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge22bv37dhj31k60ladks.jpg" alt="img"></p>
+<p>假设要编译以下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;span&#x2F;&gt;</span><br><span class="line">  &lt;span&gt;&#123;&#123; msg &#125;&#125;&lt;&#x2F;span&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>将会被编译成以下模样：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import &#123; createVNode as _createVNode, toDisplayString as _toDisplayString, openBlock as _openBlock, createBlock as _createBlock &#125; from &quot;vue&quot;</span><br><span class="line"></span><br><span class="line">export function render(_ctx, _cache) &#123;</span><br><span class="line">  return (_openBlock(), _createBlock(&quot;div&quot;, null, [</span><br><span class="line">    _createVNode(&quot;span&quot;, null, &quot;static&quot;),</span><br><span class="line">    _createVNode(&quot;span&quot;, null, _toDisplayString(_ctx.msg), 1 &#x2F;* TEXT *&#x2F;)</span><br><span class="line">  ]))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; Check the console for the AST</span><br></pre></td></tr></table></figure>
+
+<p>注意看第二个<code>_createVNode</code>结尾的“1”：</p>
+<p>Vue 在运行时会生成<code>number</code>（大于 0）值的<code>PatchFlag</code>，用作标记。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge22byzcwaj31k80s011q.jpg" alt="img"><br>仅带有<code>PatchFlag</code>标记的节点会被真正追踪，且<strong>无论层级嵌套多深，它的动态节点都直接与<code>Block</code>根节点绑定，无需再去遍历静态节点</strong></p>
+<p>再看以下例子：</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge22c2abk2j31kg0o4n30.jpg" alt="img"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;span&gt;static&lt;&#x2F;span&gt;</span><br><span class="line">  &lt;span :id&#x3D;&quot;hello&quot; class&#x3D;&quot;bar&quot;&gt;&#123;&#123; msg &#125;&#125;   &lt;&#x2F;span&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>会被编译成：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">import &#123; createVNode as _createVNode, toDisplayString as _toDisplayString, openBlock as _openBlock, createBlock as _createBlock &#125; from &quot;vue&quot;</span><br><span class="line"></span><br><span class="line">export function render(_ctx, _cache) &#123;</span><br><span class="line">  return (_openBlock(), _createBlock(&quot;div&quot;, null, [</span><br><span class="line">    _createVNode(&quot;span&quot;, null, &quot;static&quot;),</span><br><span class="line">    _createVNode(&quot;span&quot;, &#123;</span><br><span class="line">      id: _ctx.hello,</span><br><span class="line">      class: &quot;bar&quot;</span><br><span class="line">    &#125;, _toDisplayString(_ctx.msg), 9 &#x2F;* TEXT, PROPS *&#x2F;, [&quot;id&quot;])</span><br><span class="line">  ]))</span><br><span class="line">&#125;</span><br><span class="line">PatchFlag&#96; 变成了&#96;9 &#x2F;* TEXT, PROPS *&#x2F;, [&quot;id&quot;]</span><br></pre></td></tr></table></figure>
+
+<p>它会告知我们不光有<code>TEXT</code>变化，还有<code>PROPS</code>变化（id）</p>
+<p>这样既跳出了<code>virtual dom</code>性能的瓶颈，又保留了可以手写<code>render</code>的灵活性。<br>等于是：既有<code>react</code>的灵活性，又有基于模板的性能保证。</p>
+<h3 id="要点-2-事件监听缓存：cacheHandlers"><a href="#要点-2-事件监听缓存：cacheHandlers" class="headerlink" title="要点 2: 事件监听缓存：cacheHandlers"></a>要点 2: 事件监听缓存：<code>cacheHandlers</code></h3><p><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge22c6ayicj31kg0k8q7w.jpg" alt="img"><br>假设我们要绑定一个事件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;span @click&#x3D;&quot;onClick&quot;&gt;</span><br><span class="line">    &#123;&#123;msg&#125;&#125;</span><br><span class="line">  &lt;&#x2F;span&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>关闭<code>cacheHandlers</code>后：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import &#123; toDisplayString as _toDisplayString, createVNode as _createVNode, openBlock as _openBlock, createBlock as _createBlock &#125; from &quot;vue&quot;</span><br><span class="line"></span><br><span class="line">export function render(_ctx, _cache) &#123;</span><br><span class="line">  return (_openBlock(), _createBlock(&quot;div&quot;, null, [</span><br><span class="line">    _createVNode(&quot;span&quot;, &#123; onClick: _ctx.onClick &#125;, _toDisplayString(_ctx.msg), 9 &#x2F;* TEXT, PROPS *&#x2F;, [&quot;onClick&quot;])</span><br><span class="line">  ]))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>onClick</code>会被视为<code>PROPS</code>动态绑定，后续替换点击事件时需要进行更新。</p>
+<p>开启<code>cacheHandlers</code>后：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import &#123; toDisplayString as _toDisplayString, createVNode as _createVNode, openBlock as _openBlock, createBlock as _createBlock &#125; from &quot;vue&quot;</span><br><span class="line"></span><br><span class="line">export function render(_ctx, _cache) &#123;</span><br><span class="line">  return (_openBlock(), _createBlock(&quot;div&quot;, null, [</span><br><span class="line">    _createVNode(&quot;span&quot;, &#123;</span><br><span class="line">      onClick: _cache[1] || (_cache[1] &#x3D; $event &#x3D;&gt; (_ctx.onClick($event)))</span><br><span class="line">    &#125;, _toDisplayString(_ctx.msg), 1 &#x2F;* TEXT *&#x2F;)</span><br><span class="line">  ]))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>cache[1]</code>，会自动生成并缓存一个内联函数，“神奇”的变为一个静态节点。<br>Ps：相当于<code>React</code>中<code>useCallback</code>自动化。</p>
+<p>并且支持手写内联函数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">  &lt;span @click&#x3D;&quot;()&#x3D;&gt;foo()&quot;&gt;</span><br><span class="line">    &#123;&#123;msg&#125;&#125;</span><br><span class="line">  &lt;&#x2F;span&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-Tree-shaking-support"><a href="#4-Tree-shaking-support" class="headerlink" title="4. Tree shaking support"></a>4. <code>Tree shaking support</code></h2><p><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zsevggvj31he0u0afk.jpg" alt="img"></p>
+<ul>
+<li>可以将无用模块“剪辑”，仅打包需要的（比如<code>v-model,&lt;transition&gt;</code>，用不到就不会打包）。</li>
+<li>一个简单“<code>HelloWorld</code>”大小仅为：13.5kb<ul>
+<li>11.75kb，仅<code>Composition API</code>。</li>
+</ul>
+</li>
+<li>包含运行时完整功能：22.5kb<ul>
+<li>拥有更多的功能，却比<code>Vue 2</code>更迷你。</li>
+</ul>
+</li>
+</ul>
+<p>很多时候，我们并不需要 <code>vue</code>提供的所有功能，在 <code>vue 2</code> 并没有方式排除掉，但是 3.0 都可能做成了按需引入。</p>
+<h2 id="5-Composition-API"><a href="#5-Composition-API" class="headerlink" title="5. Composition API"></a>5. <code>Composition API</code></h2><p><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zddq3e4j31h80u0gqs.jpg" alt="img"><br>与<code>React Hooks</code> 类似的东西，实现方式不同。</p>
+<ul>
+<li>可与现有的 <code>Options API</code>一起使用</li>
+<li>灵活的逻辑组合与复用</li>
+<li><code>vue 3</code>的响应式模块可以和其他框架搭配使用</li>
+</ul>
+<p>混入(<code>mixin</code>) 将不再作为推荐使用， <code>Composition API</code>可以实现更灵活且无副作用的复用代码。</p>
+<p>感兴趣的可以查看：<a target="_blank" rel="noopener" href="https://composition-api.vuejs.org/#summary">https://composition-api.vuejs.org/#summary</a><br><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zt3s5sqj31po0u0e81.jpg" alt="img"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Composition API&#96;包含了六个主要&#96;API</span><br></pre></td></tr></table></figure>
+
+<p>可以到这里查看：<a target="_blank" rel="noopener" href="https://composition-api.vuejs.org/api.html#setup">https://composition-api.vuejs.org/api.html#setup</a></p>
+<p>Ps：其它的均为常见的工具函数，可先忽略不看。</p>
+<h2 id="6-Fragment"><a href="#6-Fragment" class="headerlink" title="6. Fragment"></a>6. <code>Fragment</code></h2><p><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zdhu123j31he0u0whx.jpg" alt="img"></p>
+<p><code>Fragment</code>翻译为：“碎片”</p>
+<ul>
+<li>不再限于模板中的单个根节点</li>
+<li><code>render</code> 函数也可以返回数组了，类似实现了 <code>React.Fragments</code> 的功能 。</li>
+<li>‘<code>Just works</code>’</li>
+</ul>
+<h3 id="6-1-lt-Teleport-gt"><a href="#6-1-lt-Teleport-gt" class="headerlink" title="6.1 &lt;Teleport&gt;"></a>6.1 <code>&lt;Teleport&gt;</code></h3><p><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zdlt1nhj31hb0u0gp6.jpg" alt="img"></p>
+<ul>
+<li>以前称为<code>&lt;Portal&gt;</code>，译作传送门。</li>
+<li>更多细节将由@Linusborg 分享</li>
+</ul>
+<p><code>&lt;Teleport&gt;</code>原先是对标 <code>React Portal</code>（增加多个新功能，更强）</p>
+<p><strong>但因为<code>Chrome</code>有个提案，会增加一个名为<code>Portal</code>的原生<code>element</code>，为避免命名冲突，改为<code>Teleport</code></strong></p>
+<h3 id="6-2-lt-Suspense-gt"><a href="#6-2-lt-Suspense-gt" class="headerlink" title="6.2 &lt;Suspense&gt;"></a>6.2 <code>&lt;Suspense&gt;</code></h3><p><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zdpfkktj31he0u00xj.jpg" alt="img"></p>
+<p><code>Suspense</code>翻译为：“悬念”</p>
+<ul>
+<li>可在嵌套层级中等待嵌套的异步依赖项</li>
+<li>支持<code>async setup()</code></li>
+<li>支持异步组件</li>
+</ul>
+<p>虽然<code>React 16</code>引入了<code>Suspense</code>，但直至现在都不太能用。如何将其与异步数据结合，还没完整设计出来。</p>
+<p>Vue 3 的<code>&lt;Suspense&gt;</code>更加轻量：</p>
+<p><strong>仅 5%应用能感知运行时的调度差异，综合考虑下，Vue3 的<code>&lt;Suspense&gt;</code> 没和 React 一样做运行调度处理</strong></p>
+<h2 id="7-更好的TypeScript支持"><a href="#7-更好的TypeScript支持" class="headerlink" title="7. 更好的TypeScript支持"></a>7. 更好的<code>TypeScript</code>支持</h2><p><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zdt5e3sj31he0u046k.jpg" alt="img"></p>
+<ul>
+<li><code>Vue 3</code>是用<code>TypeScript</code>编写的库，可以享受到自动的类型定义提示</li>
+<li><code>JavaScript</code>和<code>TypeScript</code>中的 API 是相同的。<ul>
+<li>事实上，代码也基本相同</li>
+</ul>
+</li>
+<li>支持<code>TSX</code></li>
+<li><code>class</code>组件还会继续支持，但是需要引入<code>vue-class-component@next</code>，该模块目前还处在 alpha 阶段。</li>
+</ul>
+<p>还有<code>Vue 3 + TypeScript</code> 插件正在开发，有类型检查，自动补全等功能。目前进展可喜。<br><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zdxzy74j31hc0u010p.jpg" alt="img"></p>
+<h2 id="8-Custom-Renderer-API：自定义渲染器-API"><a href="#8-Custom-Renderer-API：自定义渲染器-API" class="headerlink" title="8. Custom Renderer API：自定义渲染器 API"></a>8. <code>Custom Renderer API</code>：自定义渲染器 API</h2><p><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zdz8r6hj31he0u0q9f.jpg" alt="img"></p>
+<ul>
+<li>正在进行<code>NativeScript Vue</code>集成</li>
+<li>用户可以尝试<code>WebGL</code>自定义渲染器，与普通 Vue 应用程序一起使用（<code>Vugel</code>）。</li>
+</ul>
+<p>意味着以后可以通过 <code>vue</code>， <code>Dom</code> 编程的方式来进行 <code>webgl</code> 编程 。感兴趣可以看这里：<a target="_blank" rel="noopener" href="https://vugel.planning.nl/#application">Getting started vugel</a></p>
+<h2 id="9-剩余工作"><a href="#9-剩余工作" class="headerlink" title="9. 剩余工作"></a>9. 剩余工作</h2><p><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1ze8h3fgj31ha0u0gpv.jpg" alt="img"></p>
+<h3 id="9-1-Docs-amp-Migration-Guides"><a href="#9-1-Docs-amp-Migration-Guides" class="headerlink" title="9.1 Docs &amp; Migration Guides"></a>9.1 <code>Docs &amp; Migration Guides</code></h3><p><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zeab0qdj31hm0u045x.jpg" alt="img"></p>
+<ul>
+<li>新的文档编写交由<code>@NataliaTepluhina, @sdras, @bencodezen &amp; @phanan</code> 负责</li>
+<li><code>@sdras</code> 正在做自动升级迁移工具</li>
+<li><code>@sodatea</code> 已经开始研究<code>CodeMods</code></li>
+</ul>
+<h3 id="9-2-Router"><a href="#9-2-Router" class="headerlink" title="9.2 Router"></a>9.2 <code>Router</code></h3><p><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zeejh3sj31hl0u0whv.jpg" alt="img"></p>
+<ul>
+<li>下一代 <code>Router</code>：<code>vue-router@next</code>已在<code>alpha</code>阶段，感谢<code>@posva</code></li>
+</ul>
+<p>有部分的<code>API</code>变动，可到<code>RFC</code>上看。</p>
+<h3 id="9-3-Vuex"><a href="#9-3-Vuex" class="headerlink" title="9.3 Vuex"></a>9.3 <code>Vuex</code></h3><p><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zej91d2j31hg0u0n31.jpg" alt="img">`</p>
+<ul>
+<li>下一代<code>Vuex</code>：，<code>vuex@next</code>（与<code>Vue 3 compat</code>相同的 API），已在<code>alpha</code>阶段，感谢<code>@KiaKing</code>。</li>
+<li>团队正在为下一次迭代试验<code>Vuex API</code>的简化</li>
+</ul>
+<p>目前以兼容<code>Vue 3</code>为主，基本上没有<code>API</code>变动，莫慌。</p>
+<h3 id="9-4-CLI"><a href="#9-4-CLI" class="headerlink" title="9.4 CLI"></a>9.4 <code>CLI</code></h3><p><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zemntztj31h80u0wja.jpg" alt="img"></p>
+<ul>
+<li><code>CLI</code>插件：<code>vue-cli-plugin-vue-next</code>by <code>@sodatea</code></li>
+<li>（wip）<code>CodeMods</code>支持升级<code>Vue 2</code>应用</li>
+</ul>
+<h3 id="9-5-新工具：vite（法语-“快”）"><a href="#9-5-新工具：vite（法语-“快”）" class="headerlink" title="9.5 新工具：vite（法语 “快”）"></a>9.5 新工具：<code>vite</code>（法语 “快”）</h3><p><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zeqxdv0j31h20u0n12.jpg" alt="img"><br>地址：<a target="_blank" rel="noopener" href="https://github.com/vuejs/vite">https://github.com/vuejs/vite</a></p>
+<p>一个简易的<code>http</code>服务器，无需<code>webpack</code>编译打包，根据请求的<code>Vue</code>文件，直接发回渲染，且支持热更新（非常快）</p>
+<h3 id="9-6-vue-test-utils"><a href="#9-6-vue-test-utils" class="headerlink" title="9.6 vue-test-utils"></a>9.6 <code>vue-test-utils</code></h3><p><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zeu7cqcj31hg0u00xc.jpg" alt="img"></p>
+<ul>
+<li>下一代<code>test-utils</code>:<code>test-utils@next</code><ul>
+<li>by <code>@lmiller1990, @dobromir-hristov, @afontcu &amp; @JessicaSachs</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="9-7-DevTools"><a href="#9-7-DevTools" class="headerlink" title="9.7 DevTools"></a>9.7 <code>DevTools</code></h3><p><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zexzr4xj31hg0u0gpx.jpg" alt="img"></p>
+<ul>
+<li>早期的原型已经由@Akryum 完成，当我们到<code>beta</code>时，将完全集成。</li>
+</ul>
+<p>目前需要花更多精力去完善。</p>
+<h3 id="9-8-IDE-Support-Vetur"><a href="#9-8-IDE-Support-Vetur" class="headerlink" title="9.8 IDE Support (Vetur)"></a>9.8 <code>IDE Support (Vetur)</code></h3><p><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zf1owoqj31hm0u0wjz.jpg" alt="img"></p>
+<ul>
+<li><code>@znck</code>目前正在试验模板的类型检查</li>
+<li><code>@octref</code>将在 5 月为<code>Vue 3</code>进行<code>Vetur</code>集成</li>
+</ul>
+<h3 id="9-9-Nuxt"><a href="#9-9-Nuxt" class="headerlink" title="9.9 Nuxt"></a>9.9 <code>Nuxt</code></h3><p><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zf302shj31ha0u0dkc.jpg" alt="img"></p>
+<p>目前<code>Nuxt</code>的整合工作也正在进行中，内部团队已经跑起来了。还需要时间磨合</p>
+<h2 id="10-Vue-2-x还有-2-7-版本"><a href="#10-Vue-2-x还有-2-7-版本" class="headerlink" title="10 Vue 2.x还有 2.7 版本"></a>10 <code>Vue 2.x</code>还有 2.7 版本</h2><p><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zf6uj2oj31ho0u0agc.jpg" alt="img"></p>
+<ul>
+<li>将有最后一个小版本（2.7）</li>
+<li>从<code>Vue 3</code>向后移植兼容的改进(不损坏兼容性前提下)</li>
+<li>加上在<code>Vue 3</code>中删除的功能的弃用警告</li>
+<li><code>LTS1</code> 18 个月。</li>
+</ul>
+<p>最后建议：<code>Vue 3</code>虽好，如果你的项目很稳定，且对新功能无过多的要求或者迁移成本过高，则不建议升级。</p>
+<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>花了一宿反复回放整理出来的，如有错误，尽情谅解。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zij5j87j31hj0u0q4u.jpg" alt="img"></p>
+<p>附：<strong>直播中用到的渲染模板查看工具地址</strong>：<a target="_blank" rel="noopener" href="https://vue-next-template-explorer.netlify.app/">https://vue-next-template-explorer.netlify.app/</a><br><img src= "/img/loading.gif" data-lazy-src="https://tva1.sinaimg.cn/large/007S8ZIlgy1ge1zilibhuj31kg0oc0xi.jpg" alt="img"></p>
+
+  </div>
+  <!--评论块-->
+    
+
+</article>
+<nav class="post-nav">
+  <!-- Prev Nav -->
+    
+  <a href="/posts/5d1df7f/" id="post_nav-newer" class="post-nav-content prev-content">
+      新篇
+  </a>
+    
+
+
+  <!-- Next Nav -->
+    
+  <a href="/posts/5a55758b/" id="post_nav-older" class="post-nav-content next-content">
+      旧篇
+  </a>
+    
+</nav>
+<div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
+<div class="post-toc-none"><p>(无)</p></div>
+<div class="post-toc-box">
+    <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%89%8D%E8%A8%80"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-%E5%85%A8%E6%96%B0%E6%96%87%E6%A1%A3RFCs"><span class="post-toc-number">2.</span> <span class="post-toc-text">1. 全新文档RFCs</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-%E5%85%AD%E5%A4%A7%E4%BA%AE%E7%82%B9"><span class="post-toc-number">3.</span> <span class="post-toc-text">2. 六大亮点</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-Performance"><span class="post-toc-number">4.</span> <span class="post-toc-text">3.Performance</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%A6%81%E7%82%B9-1%EF%BC%9A%E7%BC%96%E8%AF%91%E6%A8%A1%E6%9D%BF%E7%9A%84%E4%BC%98%E5%8C%96"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">要点 1：编译模板的优化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E8%A6%81%E7%82%B9-2-%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC%E7%BC%93%E5%AD%98%EF%BC%9AcacheHandlers"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">要点 2: 事件监听缓存：cacheHandlers</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-Tree-shaking-support"><span class="post-toc-number">5.</span> <span class="post-toc-text">4. Tree shaking support</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-Composition-API"><span class="post-toc-number">6.</span> <span class="post-toc-text">5. Composition API</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-Fragment"><span class="post-toc-number">7.</span> <span class="post-toc-text">6. Fragment</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-1-lt-Teleport-gt"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">6.1 &lt;Teleport&gt;</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-2-lt-Suspense-gt"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">6.2 &lt;Suspense&gt;</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-%E6%9B%B4%E5%A5%BD%E7%9A%84TypeScript%E6%94%AF%E6%8C%81"><span class="post-toc-number">8.</span> <span class="post-toc-text">7. 更好的TypeScript支持</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-Custom-Renderer-API%EF%BC%9A%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B8%B2%E6%9F%93%E5%99%A8-API"><span class="post-toc-number">9.</span> <span class="post-toc-text">8. Custom Renderer API：自定义渲染器 API</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#9-%E5%89%A9%E4%BD%99%E5%B7%A5%E4%BD%9C"><span class="post-toc-number">10.</span> <span class="post-toc-text">9. 剩余工作</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-1-Docs-amp-Migration-Guides"><span class="post-toc-number">10.1.</span> <span class="post-toc-text">9.1 Docs &amp; Migration Guides</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-2-Router"><span class="post-toc-number">10.2.</span> <span class="post-toc-text">9.2 Router</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-3-Vuex"><span class="post-toc-number">10.3.</span> <span class="post-toc-text">9.3 Vuex</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-4-CLI"><span class="post-toc-number">10.4.</span> <span class="post-toc-text">9.4 CLI</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-5-%E6%96%B0%E5%B7%A5%E5%85%B7%EF%BC%9Avite%EF%BC%88%E6%B3%95%E8%AF%AD-%E2%80%9C%E5%BF%AB%E2%80%9D%EF%BC%89"><span class="post-toc-number">10.5.</span> <span class="post-toc-text">9.5 新工具：vite（法语 “快”）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-6-vue-test-utils"><span class="post-toc-number">10.6.</span> <span class="post-toc-text">9.6 vue-test-utils</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-7-DevTools"><span class="post-toc-number">10.7.</span> <span class="post-toc-text">9.7 DevTools</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-8-IDE-Support-Vetur"><span class="post-toc-number">10.8.</span> <span class="post-toc-text">9.8 IDE Support (Vetur)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-9-Nuxt"><span class="post-toc-number">10.9.</span> <span class="post-toc-text">9.9 Nuxt</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#10-Vue-2-x%E8%BF%98%E6%9C%89-2-7-%E7%89%88%E6%9C%AC"><span class="post-toc-number">11.</span> <span class="post-toc-text">10 Vue 2.x还有 2.7 版本</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E7%BB%93%E6%9D%9F"><span class="post-toc-number">12.</span> <span class="post-toc-text">结束</span></a></li></ol>
+</div>
+<!--<div class="post-back"><i class="material-icons">arrow_back</i></div>-->
+<script type="text/javascript">
+    menu();
+</script>
+  </div>
+</div>
+<div id="bottom-outer">
+  <div id="bottom-inner">
+    <a  id="top-button" onfocus="this.blur();"><div class="up upinbody" style="background-color:#26A69A"><i class="material-icons material-up">vertical_align_top</i></div></a>
+
+
+<p style="line-height: 45px">Copyright ©  2017  Phoenix</p>
+<p style="line-height: 45px">Powered by <a href="https://hexo.io/" target="_blank"> Hexo </a> && Theme - <a href="https://github.com/moumao/hexo-theme-Vateral" target="_blank">Vateral</a></p>
+
+  </div>
+</div>
+
+<!--影集界面需要的资源-->
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+<script src="/js/materialize.min.js"></script>
+
+<script src="/js/main.min.js"></script>
+
+
+<script>
+    NProgress.start();
+    NProgress.done();
+    lazy();
+    links();
+    window.onpopstate = menu();
+    //pjax操作
+    $(document).pjax('a:not(.nopjax)', '#content-inner', {fragment:'#content-inner', timeout:8000});
+    $(document).on('pjax:start', NProgress.start).on('pjax:end', NProgress.done)
+        .on('pjax:end', () => {
+            dowmdiv();
+            lazy();
+            toc();
+            links();
+            menu();
+        });
+</script>
+
+</body>
+</html>
