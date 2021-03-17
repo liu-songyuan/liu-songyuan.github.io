@@ -1,0 +1,152 @@
+.highlight{
+  background: black !important;
+  margin: 0.5em 0;
+  padding: 1em 2%;
+  border-style: solid;
+  border-width: 1px;
+  overflow: auto;
+  color:white;
+}
+pre, code{
+  background: black;
+  font-family: monospace;
+  white-space: pre;
+  margin: 1em 0;
+}
+.highlight pre{
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.highlight table{
+  margin: 0;
+  width: auto;
+}
+.highlight td{
+  border: none;
+  padding: 0;
+}
+.highlight figcaption{
+  font-size: 0.85em;
+  color: #999999;
+  line-height: 1em;
+  margin-bottom: 1em;
+}
+.highlight figcaption::after{
+  content:"";
+  clear:both;
+  display:block;;
+}
+.highlight figcaption a{
+  float: right;
+}
+.highlight .gutter pre{
+  color: #666;
+  text-align: right;
+  padding-right: 10px;
+}
+/* Gist ---------------*/
+/*
+.gist{
+  color:white;
+}/*
+.gist .gist-file {
+  border: none;
+  font-family: monospace;
+  margin: 0;
+    color:white;
+}
+.gist .gist-file .gist-data {
+  background: none;
+  border: none;
+  color:white;
+}
+.gist .gist-file .gist-data .blob-numjs-line-number {
+  background: none;
+  border: none;
+  padding-right: 20px;
+  color: #666;
+  text-align: left;
+}
+.gist .gist-file .gist-data .line-data {
+  padding: 0 !important;
+}
+.gist .gist-file .highlight {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.gist .gist-file .gist-meta {
+  background: #333;
+  color: #999;
+  font: 0.85em "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-shadow: 0 0;
+  padding: 0;
+  margin-top: 1em;
+  margin-left: 20px;
+}
+.gist .gist-file .gist-meta a {
+  color: #258fb8;
+  font-weight: normal;
+}
+.gist .gist-file .gist-meta a:hover {
+  text-decoration: underline;
+}*/
+
+/*-----------------------------*/
+pre .comment,
+pre .title {
+  color: #baffc9;
+}
+pre .variable,
+pre .attribute,
+pre .tag,
+pre .regexp,
+pre .ruby .constant,
+pre .xml .tag .title,
+pre .xml .pi,
+pre .xml .doctype,
+pre .html .doctype,
+pre .css .id,
+pre .css .class,
+pre .css .pseudo {
+  color: #e5d0ff;
+}
+pre .number,
+pre .preprocessor,
+pre .built_in,
+pre .literal,
+pre .params,
+pre .constant {
+  color: #bbeeff;
+}
+pre .class,
+pre .ruby .class .title,
+pre .css .rules .attribute {
+  color: #ffffba;
+}
+pre .string,
+pre .value,
+pre .inheritance,
+pre .header,
+pre .ruby .symbol,
+pre .xml .cdata {
+  color: #bf8bff;
+}
+pre .css .hexcolor {
+  color: #baffc9;
+}
+pre .function,
+pre .python .decorator,
+pre .python .title,
+pre .ruby .function .title,
+pre .ruby .title .keyword,
+pre .perl .sub,
+pre .javascript .title,
+pre .coffeescript .title {
+  color: #3366ff;
+}
+pre .keyword,
+pre .javascript .function {
+  color: #ffb3ba;
+}

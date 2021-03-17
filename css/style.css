@@ -131,7 +131,7 @@ body {
 }
 .outer {
   zoom: 1;
-  max-width: 1220px;
+  max-width: 920px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -146,8 +146,8 @@ body {
 .inner {
   display: inline;
   float: left;
-  width: 98.33333333333333%;
-  margin: 0 0.833333333333333%;
+  width: 97.77777777777777%;
+  margin: 0 1.111111111111111%;
 }
 .left,
 .alignleft {
@@ -183,18 +183,9 @@ body {
 .mobile-nav-on #wrap {
   left: 250px;
 }
-@media screen and (min-width: 768px) {
-  #main {
-    display: inline;
-    float: left;
-    width: 73.33333333333333%;
-    margin: 0 0.833333333333333%;
-  }
-}
 .article-date,
 .article-category-link,
-.archive-year,
-.widget-title {
+.archive-year {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0;
@@ -206,159 +197,109 @@ body {
   font-weight: bold;
 }
 .article-entry h1,
-.widget h1,
 .article-entry h2,
-.widget h2,
 .article-entry h3,
-.widget h3,
 .article-entry h4,
-.widget h4,
 .article-entry h5,
-.widget h5,
-.article-entry h6,
-.widget h6 {
+.article-entry h6 {
   font-weight: bold;
   color: #444;
   font-family: "Droid Serif", Georgia, Serif;
 }
 .article-entry h1 a,
-.widget h1 a,
 .article-entry h2 a,
-.widget h2 a,
 .article-entry h3 a,
-.widget h3 a,
 .article-entry h4 a,
-.widget h4 a,
 .article-entry h5 a,
-.widget h5 a,
-.article-entry h6 a,
-.widget h6 a {
+.article-entry h6 a {
   color: #444;
   text-decoration: none;
 }
 .article-entry h1 a:hover,
-.widget h1 a:hover,
 .article-entry h2 a:hover,
-.widget h2 a:hover,
 .article-entry h3 a:hover,
-.widget h3 a:hover,
 .article-entry h4 a:hover,
-.widget h4 a:hover,
 .article-entry h5 a:hover,
-.widget h5 a:hover,
-.article-entry h6 a:hover,
-.widget h6 a:hover {
+.article-entry h6 a:hover {
   color: #258fb8;
 }
 .article-entry h2,
-.widget h2,
 .article-entry h3,
-.widget h3,
 .article-entry h4,
-.widget h4,
 .article-entry h5,
-.widget h5,
-.article-entry h6,
-.widget h6 {
+.article-entry h6 {
   font-weight: 600;
   margin-bottom: 10px;
 }
-.article-entry h1,
-.widget h1 {
+.article-entry h1 {
   font-size: 2em;
 }
-.article-entry h2,
-.widget h2 {
+.article-entry h2 {
   font-size: 1.5em;
 }
-.article-entry h3,
-.widget h3 {
+.article-entry h3 {
   font-size: 1.3em;
 }
-.article-entry h4,
-.widget h4 {
+.article-entry h4 {
   font-size: 1.2em;
 }
-.article-entry h5,
-.widget h5 {
+.article-entry h5 {
   font-size: 1em;
 }
-.article-entry h6,
-.widget h6 {
+.article-entry h6 {
   font-size: 1em;
   color: #888;
 }
-.article-entry hr,
-.widget hr {
+.article-entry hr {
   border: 1px dashed #aaa;
 }
-.article-entry strong,
-.widget strong {
+.article-entry strong {
   font-weight: bold;
 }
 .article-entry em,
-.widget em,
-.article-entry cite,
-.widget cite {
+.article-entry cite {
   font-style: italic;
 }
 .article-entry sup,
-.widget sup,
-.article-entry sub,
-.widget sub {
+.article-entry sub {
   font-size: 0.75em;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
-.article-entry sup,
-.widget sup {
+.article-entry sup {
   top: -0.5em;
 }
-.article-entry sub,
-.widget sub {
+.article-entry sub {
   bottom: -0.2em;
 }
-.article-entry small,
-.widget small {
+.article-entry small {
   font-size: 0.85em;
 }
 .article-entry acronym,
-.widget acronym,
-.article-entry abbr,
-.widget abbr {
+.article-entry abbr {
   border-bottom: 1px dotted;
 }
 .article-entry ul,
-.widget ul,
 .article-entry ol,
-.widget ol,
-.article-entry dl,
-.widget dl {
+.article-entry dl {
   margin: 0 20px;
   line-height: 1.6em;
 }
 .article-entry ul ul,
-.widget ul ul,
 .article-entry ol ul,
-.widget ol ul,
 .article-entry ul ol,
-.widget ul ol,
-.article-entry ol ol,
-.widget ol ol {
+.article-entry ol ol {
   margin-top: 0;
   margin-bottom: 0;
 }
-.article-entry ul,
-.widget ul {
+.article-entry ul {
   list-style: disc;
 }
-.article-entry ol,
-.widget ol {
+.article-entry ol {
   list-style: decimal;
 }
-.article-entry dt,
-.widget dt {
+.article-entry dt {
   font-weight: bold;
 }
 #header {
@@ -1694,127 +1635,4 @@ pre .javascript .function {
 }
 #totop a:before {
   content: '\f139';
-}
-@media screen and (min-width: 768px) {
-  #sidebar {
-    display: inline;
-    float: left;
-    width: 23.333333333333332%;
-    margin: 0 0.833333333333333%;
-  }
-}
-.widget-wrap {
-  margin: 50px 0;
-}
-.widget-title {
-  padding: 8px 20px;
-  font-weight: normal;
-  border-bottom: 1px solid #aaa;
-}
-.widget {
-  color: #777;
-  padding: 0;
-  border-radius: 3px;
-  word-wrap: break-word;
-  line-height: 1.6em;
-  font-size: 0.99em;
-}
-.widget a {
-  color: #888;
-  text-decoration: none;
-}
-.widget a:hover {
-  text-decoration: underline;
-  color: #258fb8;
-}
-.widget ul ul,
-.widget ol ul,
-.widget dl ul,
-.widget ul ol,
-.widget ol ol,
-.widget dl ol,
-.widget ul dl,
-.widget ol dl,
-.widget dl dl {
-  margin-left: 15px;
-  list-style: disc;
-}
-.widget ul {
-  padding: 0px 0px;
-  background-color: #fafafa;
-  border-radius: 3px;
-  -webkit-box-shadow: 0px 5px 3px -3px #888, inset 0 2px 1px rgba(255,255,255,0.97), 0 0 3px -1px rgba(0,0,0,0.8);
-  box-shadow: 0px 5px 3px -3px #888, inset 0 2px 1px rgba(255,255,255,0.97), 0 0 3px -1px rgba(0,0,0,0.8);
-}
-.widget ul li {
-  padding: 7px 30px;
-  -webkit-transition: color 0.1s;
-  -moz-transition: color 0.1s;
-  -o-transition: color 0.1s;
-  -ms-transition: color 0.1s;
-  transition: color 0.1s;
-}
-.widget ul li:hover {
-  background: #888;
-}
-.widget ul li:hover a {
-  color: #fff;
-}
-.widget ul li:hover a:hover {
-  text-decoration: underline;
-}
-.widget ul li:hover span {
-  color: #fff;
-}
-.widget ul li a {
-  color: #888;
-  text-decoration: none;
-}
-.widget ul li:first-child:hover {
-  border-radius: 3px 3px 0 0;
-}
-.widget ul li:last-child:hover {
-  border-radius: 0 0 3px 3px;
-}
-.widget ul li:only-child:hover {
-  border-radius: 3px;
-}
-.widget ul,
-.widget ol {
-  list-style: none;
-  margin: 0;
-}
-.widget ul ul,
-.widget ol ul,
-.widget ul ol,
-.widget ol ol {
-  margin: 0 20px;
-}
-.widget ul ul,
-.widget ol ul {
-  list-style: disc;
-}
-.widget ul ol,
-.widget ol ol {
-  list-style: decimal;
-}
-.category-list-count,
-.tag-list-count,
-.archive-list-count {
-  padding-left: 5px;
-  color: #888;
-  font-size: 0.85em;
-}
-.category-list-count:before,
-.tag-list-count:before,
-.archive-list-count:before {
-  content: "(";
-}
-.category-list-count:after,
-.tag-list-count:after,
-.archive-list-count:after {
-  content: ")";
-}
-.tagcloud a {
-  margin-right: 5px;
 }

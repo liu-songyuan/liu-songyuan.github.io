@@ -1,0 +1,32 @@
+/* Youtube vimeo */
+.video-container iframe{
+  width: 100%;
+  height: 100%;
+}
+
+/* Image */
+.blog-post img{
+  max-width:100%;
+}
+
+/* Blockquote */
+blockquote{
+  font-family: "Palatino Linotype", Serif;
+}
+blockquote footer{
+  font-style: italic;
+}
+blockquote footer strong{
+  margin-right: 20px;
+}
+blockquote footer cite::before{
+  content: "---";
+}
+
+/* Pullquote */
+.pullquote.left{
+  float:left !important;
+}
+.pullquote.right{
+  float:right !important;
+}
