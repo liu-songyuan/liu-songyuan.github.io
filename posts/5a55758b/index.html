@@ -1,12 +1,123 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>微信小程序云开发 | Phoenix</title><script src="https://cdn.bootcss.com/valine/1.4.4/Valine.min.js"></script><link rel="stylesheet" href="/css/arknights.css"><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.1.2/styles/atom-one-dark-reasonable.min.css"><style>@font-face {
- font-family: BenderLight;
- src: local('Bender'), url("/font/BenderLight.ttf");
-}
-@font-face {
- font-family: 'JetBrains Mono';
- src: local('JetBrains Mono'), url('/font/JetBrainsMono-Regular.woff2') format('woff2');
-}</style></head><body><header><nav><a href="/">Home</a><a href="/archives/">Archives</a></nav></header><main><article><div id="post-bg"><div id="post-title"><h1>微信小程序云开发</h1><hr></div><div id="post-content"><p><a target="_blank" rel="noopener" href="https://coding.imooc.com/class/373.html?mc_marking=3f121027165fd34665da18b6d071da9c&mc_channel=shouji">微信小程序开发</a>已经成为目前最火爆的技能之一，无论是在求职、毕设、兴趣培养等方面都已经成为一项必备技能，而小程序云开发技术的出现更是点燃了整个小程序生态圈。<br>在2019微信公开课PRO小程序分论坛上，腾讯云宣布推出总价值超过10 亿元的“小程序·云开发”资源扶持计划，对超过一百万个小程序开发者提供免费资源扶持，全面助力开发者通过云开发打造优秀的微信小程序。这是继与微信团队联合推出降低开发门槛的“小程序·云开发”产品后，腾讯云在小程序开发成本上再次面向开发者释放红利。<br>那么什么是小程序云开发呢？我们通过对比云开发模式与传统开发模式之间的区别，来解释什么是小程序的云开发。</p>
-<h3 id="小程序云开发与传统开发模式区别？"><a href="#小程序云开发与传统开发模式区别？" class="headerlink" title="小程序云开发与传统开发模式区别？"></a>小程序云开发与传统开发模式区别？</h3><h4 id="小程序传统开发模式"><a href="#小程序传统开发模式" class="headerlink" title="小程序传统开发模式"></a>小程序传统开发模式</h4><p><img src="http://img1.sycdn.imooc.com/5d53a0430001663719581082.png" alt="图片描述"></p>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  
+  <title>微信小程序云开发 | Phoenix</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="微信小程序开发已经成为目前最火爆的技能之一，无论是在求职、毕设、兴趣培养等方面都已经成为一项必备技能，而小程序云开发技术的出现更是点燃了整个小程序生态圈。在2019微信公开课PRO小程序分论坛上，腾讯云宣布推出总价值超过10 亿元的“小程序·云开发”资源扶持计划，对超过一百万个小程序开发者提供免费资源扶持，全面助力开发者通过云开发打造优秀的微信小程序。这是继与微信团队联合推出降低开发门槛的“小程序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微信小程序云开发">
+<meta property="og:url" content="https://butterfly.js.org/posts/5a55758b/">
+<meta property="og:site_name" content="Phoenix">
+<meta property="og:description" content="微信小程序开发已经成为目前最火爆的技能之一，无论是在求职、毕设、兴趣培养等方面都已经成为一项必备技能，而小程序云开发技术的出现更是点燃了整个小程序生态圈。在2019微信公开课PRO小程序分论坛上，腾讯云宣布推出总价值超过10 亿元的“小程序·云开发”资源扶持计划，对超过一百万个小程序开发者提供免费资源扶持，全面助力开发者通过云开发打造优秀的微信小程序。这是继与微信团队联合推出降低开发门槛的“小程序">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://img1.sycdn.imooc.com/5d53a0430001663719581082.png">
+<meta property="og:image" content="http://img1.sycdn.imooc.com/5d53a08f0001187e16561090.png">
+<meta property="og:image" content="http://img1.sycdn.imooc.com/5d53a2ce0001bc2409360636.png">
+<meta property="og:image" content="http://img1.sycdn.imooc.com/5d53a30c0001297609380117.png">
+<meta property="og:image" content="http://img1.sycdn.imooc.com/5d53a395000161bd09380569.png">
+<meta property="og:image" content="http://img1.sycdn.imooc.com/5d53a3b20001433809300603.png">
+<meta property="og:image" content="http://img1.sycdn.imooc.com/5d53a3e30001410309250562.png">
+<meta property="article:published_time" content="2020-04-12T01:28:32.000Z">
+<meta property="article:modified_time" content="2021-03-16T07:30:01.102Z">
+<meta property="article:author" content="Jerry">
+<meta property="article:tag" content="hexo,butterfly,jerryc,demo,hexo-butterfly,hexo-theme-butterfly">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://img1.sycdn.imooc.com/5d53a0430001663719581082.png">
+  
+    <link rel="alternative" href="/atom.xml" title="Phoenix" type="application/atom+xml">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
+  
+
+</head>
+
+<body>
+<div id="container">
+  <div id="wrap">
+    <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <nav id="upper-nav" class="inner">
+      <a id="main-nav-toggle" class="nav-icon"></a>
+      <div class="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        
+          <a id="nav-github" class="nav-icon" target="_blank" rel="noopener" href="https://github.com/myname"></a>
+        
+      </div>
+    </nav>
+    <div id="header-title">
+      
+        <h1 id="blog-title-wrap">
+          <a href="/" id="blog-title">My Blog</a>
+        </h1>
+      
+    </div>
+    <div id="contenedor">
+      <ul class="cube">
+        <li class="cara">MyLogo</li>
+        <li class="cara"></li>
+        <li class="cara"></li>
+        <li class="cara"></li>
+        <li class="cara"></li>
+        <li class="cara"></li>
+      </ul>
+    </div>
+    <nav id="main-nav">
+      
+        <a class="main-nav-link" href="/">Home</a>
+      
+        <a class="main-nav-link" href="/archives">Archives</a>
+      
+        <a class="main-nav-link" href="/about">About</a>
+      
+      <a class="main-nav-link st-search-show-outputs">搜索</a>
+    </nav>
+  </div>
+</header>
+
+    <div class="outer">
+      <section id="main"><article id="post-微信小程序云开发" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <h3 href="/posts/5a55758b/" class="article-date">
+  <time datetime="2020-04-12T01:28:32.000Z" itemprop="datePublished">2020-04-12</time>
+</h3>
+    
+  </div>
+  <div class="article-inner">
+  <div class="curve-down">
+  <div class="fill-content">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      微信小程序云开发
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <p><a target="_blank" rel="noopener" href="https://coding.imooc.com/class/373.html?mc_marking=3f121027165fd34665da18b6d071da9c&mc_channel=shouji">微信小程序开发</a>已经成为目前最火爆的技能之一，无论是在求职、毕设、兴趣培养等方面都已经成为一项必备技能，而小程序云开发技术的出现更是点燃了整个小程序生态圈。<br>在2019微信公开课PRO小程序分论坛上，腾讯云宣布推出总价值超过10 亿元的“小程序·云开发”资源扶持计划，对超过一百万个小程序开发者提供免费资源扶持，全面助力开发者通过云开发打造优秀的微信小程序。这是继与微信团队联合推出降低开发门槛的“小程序·云开发”产品后，腾讯云在小程序开发成本上再次面向开发者释放红利。<br>那么什么是小程序云开发呢？我们通过对比云开发模式与传统开发模式之间的区别，来解释什么是小程序的云开发。</p>
+<h3 id="小程序云开发与传统开发模式区别？"><a href="#小程序云开发与传统开发模式区别？" class="headerlink" title="小程序云开发与传统开发模式区别？"></a>小程序云开发与传统开发模式区别？</h3><h4 id="小程序传统开发模式"><a href="#小程序传统开发模式" class="headerlink" title="小程序传统开发模式"></a>小程序传统开发模式</h4><p><img src= "/img/loading.gif" data-lazy-src="http://img1.sycdn.imooc.com/5d53a0430001663719581082.png" alt="图片描述"></p>
 <ul>
 <li><p>开发效率低：</p>
 <p>大多数小程序所展示的数据都应该不是在页面上写死的，所以大多数小程序都需要一个服务端，服务端可以用多种技术实现，如PHP、Node.js、Java等。不管使用哪种技术实现服务端，开发一款小程序一般情况下都需要至少配备两个程序员，一个开发小程序前端，一个开发小程序服务端，这样的话这两个程序员之间就需要不断沟通，确认共同遵循的接口。可沟通过程中往往权责不清晰，有很多临界的位置，谁管都可以，容易引发扯皮，沟通成本非常高，导致开发效率下降。同时，由于开发人员的增多，整个开发的成本也会提高。这也是困扰着很多创业型公司的问题。</p>
@@ -15,7 +126,7 @@
 <p>项目上线的时候，公司需要自己搭建服务，不仅要花大价钱买机器、买宽带流量，还得请专门的人员去维护。运维人员需要考虑比如数据库运维，文件存储、内容加速、网络防护、容器服务、负载均衡、安全加固等等一系列的问题，这在公司里面是很头疼的一件事。</p>
 </li>
 </ul>
-<h3 id="小程序云开发模式"><a href="#小程序云开发模式" class="headerlink" title="小程序云开发模式"></a>小程序云开发模式</h3><p>小程序云开发是腾讯云和微信团队联合开发的，集成于小程序控制台的原生 Serverless 云服务，为开发者提供完整的原生云端支持和微信服务支持，弱化后端和运维概念，无需搭建服务器，使用平台提供的 API 进行核心业务开发，即可实现快速上线和迭代。只需要一名开发人员就可以完成所有的工作。云开发核心能力包括：云存储、云数据库、云函数、云调用、HTTP API。<img src="http://img1.sycdn.imooc.com/5d53a08f0001187e16561090.png" alt="图片描述"></p>
+<h3 id="小程序云开发模式"><a href="#小程序云开发模式" class="headerlink" title="小程序云开发模式"></a>小程序云开发模式</h3><p>小程序云开发是腾讯云和微信团队联合开发的，集成于小程序控制台的原生 Serverless 云服务，为开发者提供完整的原生云端支持和微信服务支持，弱化后端和运维概念，无需搭建服务器，使用平台提供的 API 进行核心业务开发，即可实现快速上线和迭代。只需要一名开发人员就可以完成所有的工作。云开发核心能力包括：云存储、云数据库、云函数、云调用、HTTP API。<img src= "/img/loading.gif" data-lazy-src="http://img1.sycdn.imooc.com/5d53a08f0001187e16561090.png" alt="图片描述"></p>
 <h3 id="区别对比"><a href="#区别对比" class="headerlink" title="区别对比"></a>区别对比</h3><p>传统开发模式</p>
 <ul>
 <li>开发效率低：过多的非业务逻辑需要处理，导致开发效率难以提升</li>
@@ -42,11 +153,11 @@
 </ul>
 <h3 id="开通云开发"><a href="#开通云开发" class="headerlink" title="开通云开发"></a>开通云开发</h3><ol>
 <li>下载微信开发者工具并安装：<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html">下载地址</a></li>
-<li>新建项目，后端服务选择小程序云开发<img src="http://img1.sycdn.imooc.com/5d53a2ce0001bc2409360636.png" alt="图片描述"></li>
-<li>新建项目后，点击开发工具上方云开发按钮!<img src="http://img1.sycdn.imooc.com/5d53a30c0001297609380117.png" alt="图片描述"></li>
-<li>点击开通按钮<img src="http://img1.sycdn.imooc.com/5d53a395000161bd09380569.png" alt="图片描述"></li>
-<li>填入环境名称，图中的基础配额完全都是免费的<img src="http://img1.sycdn.imooc.com/5d53a3b20001433809300603.png" alt="图片描述"></li>
-<li>点击确定，开通云开发<img src="http://img1.sycdn.imooc.com/5d53a3e30001410309250562.png" alt="图片描述"></li>
+<li>新建项目，后端服务选择小程序云开发<img src= "/img/loading.gif" data-lazy-src="http://img1.sycdn.imooc.com/5d53a2ce0001bc2409360636.png" alt="图片描述"></li>
+<li>新建项目后，点击开发工具上方云开发按钮!<img src= "/img/loading.gif" data-lazy-src="http://img1.sycdn.imooc.com/5d53a30c0001297609380117.png" alt="图片描述"></li>
+<li>点击开通按钮<img src= "/img/loading.gif" data-lazy-src="http://img1.sycdn.imooc.com/5d53a395000161bd09380569.png" alt="图片描述"></li>
+<li>填入环境名称，图中的基础配额完全都是免费的<img src= "/img/loading.gif" data-lazy-src="http://img1.sycdn.imooc.com/5d53a3b20001433809300603.png" alt="图片描述"></li>
+<li>点击确定，开通云开发<img src= "/img/loading.gif" data-lazy-src="http://img1.sycdn.imooc.com/5d53a3e30001410309250562.png" alt="图片描述"></li>
 <li>开通以后，官方给出从时间是十分钟左右就可以开通成功，实际测试其实很快</li>
 </ol>
 <h3 id="云开发提供的五大能力"><a href="#云开发提供的五大能力" class="headerlink" title="云开发提供的五大能力"></a>云开发提供的五大能力</h3><h4 id="1-云函数"><a href="#1-云函数" class="headerlink" title="1.云函数"></a>1.云函数</h4><p>一段运行在云端的代码，无需管理服务器，在开发工具内编写、一键上传部署即可运行后端代码。<br>小程序内提供了专门用于云函数调用的 API。开发者可以在云函数内获取到每次调用的上下文（appid、openid 等），无需维护复杂的鉴权机制，即可获取天然可信任的用户登录态（openid）。<br>开放了运用 Node.js 等框架编写“后端”业务逻辑后，直接可以部署在云平台下，完全不需要去考虑域名、服务器、打包发布、运维等等琐事</p>
@@ -66,9 +177,142 @@
 <li>多敲代码，多练习。只有自己不断的练习才能真正的得到提高</li>
 <li>分析问题和解决问题的能力。这是需要时间不断积累的，在遇到问题的时候，一定要多思考，对于有错误信息的问题一定要认真翻译错误信息，大多数的错误线索都能够被找到</li>
 </ul>
-<div id="paginator"></div></div><div id="post-footer"><hr><a href="/posts/7cff3812/">← Prev 抄笔记：尤雨溪在Vue3.0 Beta直播里聊到了这些…</a><hr></div><div id="bottom-btn"><a id="to-index" href="#post-index" title="index">≡</a><a id="to-top" href="#post-title" title="to top">∧</a></div><div id="Valine"></div><script>new Valine({
- el: '#Valine'
- , appId: ''
- , appKey: ''
- , placeholder: '此条评论委托企鹅物流发送'
-})</script></div></article><aside><div id="about"><a href="/" id="logo"><img src="https://ak.hypergryph.com/assets/index/images/ak/pc/faction/1.png" alt="Logo"></a><h1 id="Dr"><a href="/"> Dr.Jerry</a></h1><section id="total"><a id="total-archives" href="/archives"><span class="total-title">Archives Total:</span><span class="total-number">8</span></a><div id="total-tags"><span class="total-title">Tags:</span><span class="total-number">0</span></div><div id="total-categories"><span class="total-title">Categories:</span><span class="total-number">0</span></div></section></div><div id="aside-block"></div><footer><nobr><span class="text-title">©</span><span class="text-content">1970 to 2020</span></nobr><wbr><nobr><span class="text-title">ICP</span><span class="text-content">——备案号——</span></nobr><wbr><wbr><nobr>published with&nbsp;<a target="_blank" rel="noopener" href="http://hexo.io">Hexo&nbsp;</a></nobr><wbr><nobr>Theme&nbsp;<a target="_blank" rel="noopener" href="https://github.com/Yue-plus/hexo-theme-arknights">Arknight&nbsp;</a></nobr><wbr><nobr>by&nbsp;<a target="_blank" rel="noopener" href="https://github.com/Yue-plus">Yue_plus</a></nobr></footer></aside></main><canvas id="canvas-dust"></canvas><script src="/js/arknights.js"></script><script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script></body></html>
+
+      
+    </div>
+    <footer class="article-footer">
+      <div class="article-footer-content">
+        
+        <a data-url="https://butterfly.js.org/posts/5a55758b/" data-id="ckmbxi1pn0008pgpkff7af7po" class="article-share-link">分享到</a>
+        
+      </div>
+    </footer>
+  </div>
+  </div>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/posts/7cff3812/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">
+        
+          抄笔记：尤雨溪在Vue3.0 Beta直播里聊到了这些…
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+      
+      <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">近期文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/posts/4a17b156/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/posts/d95d7e09/">我的第一篇博客</a>
+          </li>
+        
+          <li>
+            <a href="/posts/48922786/">TypeScript入门</a>
+          </li>
+        
+          <li>
+            <a href="/posts/23b46ffc/">为什么Vue中的slot不能应用v-show指令</a>
+          </li>
+        
+          <li>
+            <a href="/posts/53701062/">小程序搜索功能，云开发搜索，小程序云开发模糊搜索，同时搜索多个字段</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">三月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">十月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+</aside>
+      
+    </div>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Jerry<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      .
+      Theme by <a href="https://github.com/sun11/hexo-theme-paperbox" target="_blank">Paperbox</a>
+    </div>
+  </div>
+</footer>
+  </div>
+  <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+  <a href="#search" class="mobile-nav-link st-search-show-outputs">搜索</a>
+</nav>
+
+  
+
+<!-- totop start -->
+<div id="totop">
+	<a title="返回顶部"></a>
+</div>
+<!-- totop end -->
+
+<!-- swiftype search start -->
+
+<!-- swiftype search end -->
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/lrsjng.jquery-qrcode/0.12.0/jquery.qrcode.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+</div>
+</body>
+</html>

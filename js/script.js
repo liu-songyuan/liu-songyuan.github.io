@@ -1,256 +1,183 @@
-/**
- * polyfill for Element.matches
- */
-if (!Element.prototype.matches) {
-  Element.prototype.matches = Element.prototype.msMatchesSelector ||
-    Element.prototype.webkitMatchesSelector;
-}
-
-/**
- * @function debounce
- * @param {Function} fn The function to run after a certain amount of time
- * @param {Number} wait The delay time in milliseconds
- * @return {Function}
- */
-const debounce = (fn, wait) => {
-  let timer;
-  return function() {
-    const fnCall = () => fn.apply(this, arguments);
-    clearTimeout(timer);
-    timer = setTimeout(fnCall, wait)
-  }
-};
-
-/**
- * implementation for Accessible Layerpopup
- * @module SlidingMenu
- * @param {Element} doc document element
- */
-const SlidingMenu = (() => {
-  'use strict';
-
-  const rootEl = document.documentElement;
-  /**
-   * @private {String} tabbableSelector The selector for selecting a tabbable elements
-   */
-  const tabbableSelector = `button, [href], input:not([type="hidden"]), select, textarea, [tabindex]:not([tabindex="-1"])`;
-  /**
-   * @private {Object} props
-   * @property {HTMLElement} props.trigger=null The element that triggers sliding panel
-   * @property {HTMLElement} props.panel=null The element that is sliding panel
-   * @property {NodeList} props.tabbableEls=null The tabbable elements inside sliding panel
-   * @property {HTMLElement} props.firstTabbable=null The first tabbable elements inside sliding panel
-   * @property {HTMLElement} props.lastTabbable=null The last tabbable elements inside sliding panel
-   * @property {String} props.inertOmmits=null The selector for elements that should not be inert when sliding panel is opened
-   */
-  const props = {
-    trigger: null,
-    panel: null,
-    tabbableEls: null,
-    firstTabbable: null,
-    lastTabbable: null,
-    inertOmmits: null,
-  };
-
-  /**
-   * @public
-   * @function init
-   * @param {Object} options
-   * @param {Element} options.trigger
-   * @param {Element} options.panel
-   * @param {String} options.inertOmmits
-   */
-  const init = function(options) {
-    const {
-      trigger,
-      panel,
-      inertOmmits,
-    } = options;
-
-    if(!trigger || !panel) {
-      throw new Error("SlidingMenu can't initialized.\ncheck your options");
+(function($){
+  /*toTop start*/
+  // When to show the scroll link
+  // higher number = scroll link appears further down the page
+  var upperLimit = 1000;
+  // Our scroll link element
+  var scrollElem = $('#totop');
+  // Scroll to top speed
+  var scrollSpeed = 500;
+  // Show and hide the scroll to top link based on scroll position
+  $(window).scroll(function() {
+    var scrollTop = $(document).scrollTop();
+    if (scrollTop > upperLimit) {
+      $(scrollElem).stop().fadeTo(300, 1); // fade back in
+    } else {
+      $(scrollElem).stop().fadeTo(300, 0); // fade out
     }
+  });
 
-    // initializing props's properties
-    props.trigger = trigger;
-    props.panel = panel;
-    props.tabbableEls = panel.querySelectorAll(tabbableSelector);
-    props.firstTabbable = props.tabbableEls && props.tabbableEls[0];
-    props.lastTabbable = props.tabbableEls && props.tabbableEls[props.tabbableEls.length - 1];
-    props.inertOmmits = inertOmmits;
+  // Scroll to top animation on click
+  $(scrollElem).click(function() {
+    $('html, body').animate({
+      scrollTop: 0
+    }, scrollSpeed);
+    return false;
+  });
+  /*toTop end*/
 
-    // bind events for activating open/close slide menu
-    panel.addEventListener('transitionend', handlerTransitionEvt, false);
-    trigger.addEventListener('click', toggleNavigation, false);
+  /*cubeRotate start*/
+  var isIE = function(){
+	return ("ActiveXObject" in window);
   };
+  if( isIE() ) {
+    $('#contenedor').hide();
+  } else {
+    var cube = $('.cube'),
+        offset = $('#contenedor').offset(),
+        offsetleft = (offset.left + 50),
+        offsettop = (offset.top + 50);
 
-  /**
-   * return current visibility
-   * @public
-   * @function isVisible
-   * @return {Boolean}
-   */
-  const isVisible = () => {
-    const { panel } = props;
-    return panel.classList.contains('nav--animate');
-  };
-
-  /**
-   * @private
-   * @function toggleNavigation
-   */
-  const toggleNavigation = () => {
-    if(isVisible()) closePanel();
-    else openPanel();
-  };
-
-  /**
-   * @private
-   * @function openPanel
-   */
-  const openPanel = () => {
-    const {
-      panel,
-      trigger,
-    } = props;
-    rootEl.classList.add('sidebar-opened');
-    document.addEventListener('keydown', handlerKeyEvt, false);
-
-    debounce(() => {
-      panel.classList.add('nav--animate');
-      panel.setAttribute('aria-hidden', 'false');
-
-      trigger.lastChild.textContent = `close`;
-      trigger.setAttribute('aria-expanded', 'true');
-      setInertness(panel);
-    }, 50)();
-  };
-
-  /**
-   * @private
-   * @function closePanel
-   */
-  const closePanel = () => {
-    const { panel } = props;
-
-    unsetInertness();
-    panel.classList.remove('nav--animate');
-    document.removeEventListener('keydown', handlerKeyEvt, false);
-  };
-
-  /**
-   * set inert elements of the bottom page except menu element when the menu is opened
-   * @private
-   * @function setInertness
-   */
-  const setInertness = () => {
-    const {
-      inertOmmits,
-      panel,
-    } = props;
-
-    for(let i = -1, node; node = panel.parentNode.children[++i];) {
-      if(node === panel || node.matches(inertOmmits))
-        continue;
-      node.setAttribute('aria-hidden', 'true');
-      node.setAttribute('inert', '');
-    }
-  }
-
-  /**
-   * unset inert elements when the menu is closed
-   * @private
-   * @function unsetInertness
-   */
-  const unsetInertness = () => {
-    const nodes = document.querySelectorAll('[inert]');
-    for(let i = -1, node; node = nodes[++i];){
-      node.removeAttribute('aria-hidden');
-      node.removeAttribute('inert');
-    }
-  }
-
-  /**
-   * handle after the css animation ends
-   * @private
-   * @function handlerTransitionEvt
-   */
-  const handlerTransitionEvt = () => {
-    const {
-      firstTabbable,
-      trigger,
-      panel,
-    } = props;
-    debounce(() => {
-      if(isVisible()) {
-        firstTabbable.focus();
-      }else{
-        trigger.lastChild.textContent = `menu`;
-        trigger.setAttribute('aria-expanded', 'false');
-        rootEl.classList.remove('sidebar-opened');
-        panel.setAttribute('aria-hidden', 'true');
-        trigger.focus();
+    cube.on({
+      mousemove: function(e) {
+        $(this).css('transform','rotateX(' + (e.pageY - offsettop) + 'deg) rotateY(' + (e.pageX - offsetleft) + 'deg)');
+        $(this).addClass('noanimar').removeClass('animar');
+      },
+      mouseout: function() {
+        $(this).css('transform','rotateX(-25deg) rotateY(32deg)');
+        $(this).addClass('animar').removeClass('noanimar');
       }
-    }, 20)();
-  };
-
-  /**
-   * make a trap for the focus movement via tab key, and closing feature via ESC key
-   * @private
-   * @function handlerKeyEvt
-   * @param {Event}
-   */
-  const handlerKeyEvt = event => {
-    event = event || window.event;
-    const {
-      keyCode,
-      which,
-      target,
-      srcElement,
-      shiftKey,
-    } = event;
-    const {
-      lastTabbable,
-      firstTabbable,
-      trigger,
-    } = props;
-    const keycode = keyCode || which;
-    const el = target || srcElement;
-
-    switch (keycode) {
-      case 27:
-        if(isVisible()) closePanel();
-        break;
-      case 9:
-        if(isVisible() && el === trigger && shiftKey) {
-          event.preventDefault();
-          event.stopPropagation();
-          lastTabbable.focus();
-        }else if (isVisible() && el === trigger && !shiftKey) {
-          event.preventDefault();
-          event.stopPropagation();
-          firstTabbable.focus();
-        }else if(el === firstTabbable && shiftKey) {
-          event.preventDefault();
-          event.stopPropagation();
-          trigger.focus();
-        }else if(el === lastTabbable && !shiftKey) {
-          event.preventDefault();
-          event.stopPropagation();
-          trigger.focus();
-        }
-        break;
-    }
-  };
-
-  return {
-    init,
-    isVisible,
+    });
+    // console.log('x=' + offsetleft + ', y=' + offsettop);
   }
-})();
+  /* cubeRotate end*/
 
-SlidingMenu.init({
-  trigger: document.getElementsByClassName('nav-toggle')[0],
-  panel: document.getElementsByClassName('nav')[0],
-  inertOmmits: `.gnb, style, meta, link, base, script, .nav`,
-})
+  // Share
+  $('body').on('click', function(){
+    $('.article-share-box.on').removeClass('on');
+    $('.qrcode').hide();
+  }).on('click', '.article-share-link', function(e){
+    e.stopPropagation();
+
+    var $this = $(this),
+      type = $this.attr('data-share'),
+      offset = $this.offset();
+
+    var url = $this.attr('data-url'),
+    encodedUrl = encodeURIComponent(url),
+    id = 'article-share-box-' + $this.attr('data-id');
+
+    if ($('#' + id).length){
+      var box = $('#' + id);
+
+      if (box.hasClass('on')){
+        box.removeClass('on');
+        return;
+      }
+    } else {
+      var html = [
+        '<div id="' + id + '" class="article-share-box">',
+          '<input class="article-share-input" value="' + url + '">',
+          '<div class="article-share-links">',
+            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+            '<a href="https://www.linkedin.com/shareArticle?url=' + encodedUrl + '" class="article-share-linkedin" target="_blank" title="Linkedin"></a>',
+            '<a href="http://service.weibo.com/share/share.php?url=' + encodedUrl + '" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+            '<a href="http://share.renren.com/share/buttonshare.do?link=' + encodedUrl + '" class="article-share-renren" target="_blank" title="Renren"></a>',
+            '<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=' + encodedUrl + '" class="article-share-qq" target="_blank" title="Qzone"></a>',
+            '<a class="article-share-weixin" target="_blank" title="Weixin"></a>',
+          '</div>',
+        '</div>'
+      ].join('');
+
+      var box = $(html);
+
+      $('body').append(box);
+    }
+
+    box.css({
+      top: offset.top + 25,
+      left: offset.left
+    }).addClass('on');
+
+    $('.article-share-weixin').click(function(){
+      var e_qrcode = $(this).parents('.article-share-box').next('.qrcode');
+      if (e_qrcode.length){
+        e_qrcode.show();
+      } else {
+        $(this).parents('.article-share-box').after('<div class="qrcode"></div>');
+        e_qrcode = $(this).parents('.article-share-box').next('.qrcode');
+        e_qrcode.qrcode({
+          "render": "div",
+          "size": 180,
+          "text": encodeURI(url)
+        });
+        e_qrcode.css({
+          top: offset.top + 20,
+          left: offset.left -150,
+        });
+      }
+    });
+
+  }).on('click', '.article-share-box', function(e){
+    e.stopPropagation();
+  }).on('click', '.article-share-box-input', function(){
+    $(this).select();
+  }).on('click', '.article-share-box-link', function(e){
+    e.preventDefault();
+    e.stopPropagation();
+
+    window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+  });
+
+  // Caption
+  $('.article-entry').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+
+      var alt = this.alt;
+
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+
+  if ($.fancybox){
+    $('.fancybox').fancybox();
+  }
+
+  // Mobile nav
+  var $container = $('#container'),
+    isMobileNavAnim = false,
+    mobileNavAnimDuration = 200;
+
+  var startMobileNavAnim = function(){
+    isMobileNavAnim = true;
+  };
+
+  var stopMobileNavAnim = function(){
+    setTimeout(function(){
+      isMobileNavAnim = false;
+    }, mobileNavAnimDuration);
+  }
+
+  $('#main-nav-toggle').on('click', function(){
+    if (isMobileNavAnim) return;
+
+    startMobileNavAnim();
+    $container.toggleClass('mobile-nav-on');
+    stopMobileNavAnim();
+  });
+
+  $('#wrap').on('click', function(){
+    if (isMobileNavAnim || !$container.hasClass('mobile-nav-on')) return;
+
+    $container.removeClass('mobile-nav-on');
+  });
+})(jQuery);
